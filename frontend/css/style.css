@@ -13,6 +13,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
     --primary-color: #007bff;
     --text-color: #333;
@@ -23,11 +30,11 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    /* font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--text-color); */
     background-color: #070710;
-    margin: 0; /* normalize.css обрабатывает большую часть, но margin: 0 для body никогда не помешает */
+    margin: 0;
 }
 
 /* --- Общие стили для всех секций --- */
@@ -40,6 +47,11 @@ section {
 h1, h2, h3 {
     margin-bottom: 25px; 
     text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    line-height: 1;
+    color: #BFBFBF;
 }
 
 img {
@@ -48,10 +60,54 @@ img {
     display: block;
 }
 
+button,
+input[type="button"],
+input[type="submit"] {
+  /* Убираем стандартный фон */
+  background: none;
+  background-color: transparent;
+
+  /* Убираем стандартную рамку (бордюр) */
+  border: none;
+  
+  /* Убираем внутренние и внешние отступы */
+  padding: 0;
+  margin: 0;
+
+  /* Гарантируем наследование шрифта от родительского элемента */
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  
+  /* Делаем курсор "указующим пальцем" при наведении */
+  cursor: pointer;
+  
+  /* Убираем специфические стили, навязанные операционной системой (macOS/Windows) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Убираем стандартное подчеркивание при фокусе в некоторых браузерах */
+  text-decoration: none;
+}
+
 .container {
     max-width: 1760px; /* Максимальная ширина контента (часто 1140px, 1200px или 1400px) */
     margin: 0 auto;    /* Центрирует контейнер на странице (устанавливает равные отступы слева и справа) */
     width: 100%;       /* Гарантирует, что контейнер занимает всю доступную ширину до max-width */
+}
+
+.button {
+    padding: 10px 15px;
+    padding-bottom: 33px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000398;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
 }
 
 /* --- header --- */
@@ -77,6 +133,7 @@ img {
     background-color: #190621; 
     border-bottom: 1px solid #81007F;
     font-family: 'Inter', sans-serif;
+    font-size: 18px;
     color: #BFBFBF;
 }
 
@@ -95,6 +152,14 @@ img {
 nav {
     display: flex;
     gap: 20px; /* Отступы между пунктами меню */
+}
+
+nav a {
+    margin-right: 23px;
+}
+
+nav a:last-child {
+  margin-right: 0;
 }
 
 /* Стили для телефона */
@@ -131,7 +196,7 @@ nav {
 
 .hero_content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .hero-img {
@@ -141,16 +206,41 @@ nav {
 }
 
 .hero_content_wrapper {
+    max-width: 870px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+}
+
+.features-title {
+    margin-top: 20px;
+    margin-bottom: 14px;
+}
+
+.features-subtitle {
+    /* margin-top: 20px; */
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #81007F;
+}
+
+.section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    width: 295px;
+    height: 38px;
 }
 
 
 /* Секция 2: Преимущества/Особенности */
-#features {
-    /* background-color: var(--background-light); */
-}
 
 .features-container {
     /* Активируем Flexbox для расположения карточек в ряд */
@@ -162,8 +252,8 @@ nav {
 
 /* Стили для отдельных элементов внутри контейнера features-container */
 .feature-item {
-    flex: 1; /* Делает элементы гибкими, чтобы они занимали равное пространство */
-    min-width: 250px; /* Минимальная ширина элемента перед переносом на новую строку */
+    flex: 1;
+    min-width: 250px; 
     text-align: center;
     padding: 20px;
     border: 1px solid #ddd;
@@ -181,12 +271,27 @@ nav {
     justify-content: space-between;
 }
 
+.features_content_left {
+    margin-right: 20px;
+}
+
 .features_content_right {
     max-width: 870px;
 }
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+
+ul svg {
+    margin-right: 4px;
 }
 
 /* Секция 3: Описание процесса работы */
@@ -209,7 +314,7 @@ ul {
 /* --- footer --- */
 #footer .logo-contact-info-social {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #footer .container {
@@ -221,16 +326,26 @@ ul {
 }
 
 #footer {
-    background-color: var(--background-light); 
-    border-bottom: 1px solid #eee;
+    background-color: #030309; 
+    border-top: 1px solid #81007F;
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
 }
 
 #footer a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
     text-decoration: none; /* <-- ЭТО УБИРАЕТ ПОДЧЕРКИВАНИЕ */
-    color: var(--text-color); /* Делаем текст ссылок темным */
     transition: color 0.3s ease;
+    margin-right: 0;
 }
 
 #footer a:hover {
@@ -238,9 +353,14 @@ ul {
 }
 
 #footer nav {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
     display: flex;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     
 }
 
@@ -251,6 +371,7 @@ ul {
 
 #footer p {
     margin: 0;
+    margin-bottom: 20px;
 }
 
 #footer .logo {

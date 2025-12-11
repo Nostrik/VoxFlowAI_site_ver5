@@ -1,219 +1,84 @@
-:root{
-  --bg:#07060a;
-  --panel-top: #b35fe0;         /* lilac top bar */
-  --panel: rgba(30,6,24,0.65);  /* dark purple glass */
-  --panel-border: rgba(179,95,224,0.25);
-  --accent-blue: #0713b8;
-  --accent-pink: #ff24d7;
-  --text-light: #e6e3ec;
-  --muted: rgba(230,227,236,0.45);
-  --glass-outline: rgba(255,255,255,0.03);
-  --duration: 280ms;
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* контейнер секции (не трогаем ваше имя классов) */
-.section_pricing { background: linear-gradient(180deg,#0b0710 0%, #13061a 100%); padding: 70px 0; color: var(--text-light); }
-.section_pricing .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-/* Сетка карточек */
-.pricing-grid{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 28px;
-  align-items: start;
-  margin-top: 40px;
+.pricing_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* карточка */
-.pricing-card{
-  position: relative;
-  border-radius: 12px;
-  overflow: visible;
-  background: linear-gradient(180deg, rgba(30,6,24,0.55), rgba(10,4,12,0.45));
-  border: 1px solid var(--panel-border);
-  box-shadow: 0 6px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-  padding: 16px 18px 28px;
-  min-height: 380px;
-  transition: transform var(--duration) ease, box-shadow var(--duration), background var(--duration);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ .pricing_list, .plan_card {
+    max-width: 425px;
+    max-height: 503px;
+    flex-grow: 1;
+    border: 1px solid white;
 }
 
-/* верхняя цветная полоска */
-.pricing-card .top-bar{
-  width: calc(100% + 36px);
-  margin-left: -18px;
-  margin-top: -16px;
-  background: var(--panel-top);
-  padding: 10px 12px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.pricing_item_header, .plan_header {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+
+.pricing_item, .plan_pricing {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+
+.plan_header {
   text-align: center;
-  font-weight: 600;
-  color: rgba(255,255,255,0.95);
-  letter-spacing: .6px;
-  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.15);
-  transition: background var(--duration);
 }
 
-/* Список фич */
-.pricing-card .features{
-  list-style: none;
-  padding: 22px 12px;
-  margin: 10px 0 18px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-
-/* чек и текст */
-.icon-check{
-  display: inline-flex;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.06);
-  background: rgba(0,0,0,0.08);
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: rgba(179,95,224,0.95);
-  font-size: 20px;
-  transition: background var(--duration), color var(--duration), transform var(--duration);
-  box-shadow: 0 2px 10px rgba(179,95,224,0.06), inset 0 1px 0 rgba(255,255,255,0.02);
-}
-
-/* строки с текстом (кол-во задач, и т.д.) */
-.pricing-card .text{
-  color: var(--muted);
+.plan_pricing {
   text-align: center;
-  font-size: 14px;
 }
 
-/* примечание внизу карточки */
-.pricing-card .note{
-  margin-top: auto;
-  color: var(--muted);
-  font-size: 13px;
-  padding-top: 12px;
+.plan_card {
+  border-radius: 14px;
+}
+/*
+.feature-item, .plan-feature {
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    min-height: 48px;
 }
 
-/* кнопка */
-.btn{
-  margin-top: 12px;
-  width: 90%;
-  max-width: 320px;
-  background: var(--accent-blue);
-  color: #fff;
-  border: none;
-  padding: 12px 18px;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0 6px 0 rgba(7,19,184,0.15), inset 0 -6px 18px rgba(255,255,255,0.02);
-  transition: background var(--duration), transform var(--duration), box-shadow var(--duration);
-  overflow: visible;
+
+.plan-header {
+
+    background-color: #6a0dad; 
+    
+
+    color: #fff;
+    
+  
+    padding: 15px 10px;
+    
+    
+    text-align: center;
+    
+    
+    border-bottom: none; 
+    
+    
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
-/* бейдж внутри кнопки (маленький кружок справа) */
-.btn .btn-badge{
-  position: absolute;
-  right: 14px;
-  top: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.15);
-  color: #fff;
-  font-weight: 700;
-  font-size: 13px;
-  box-shadow: 0 3px 0 rgba(0,0,0,0.3);
-  transition: transform var(--duration), opacity var(--duration);
-  opacity: 0.95;
-}
-
-/* плавающий декоративный бейдж справа от карточки (появляется на hover) */
-.pricing-card .floating-badge{
-  position: absolute;
-  right: 36px;
-  top: 46%;
-  transform: translateY(-50%) scale(0.6);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.45);
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.6), 0 0 0 6px rgba(3,3,10,0.25);
-  opacity: 0;
-  transition: opacity var(--duration), transform 350ms cubic-bezier(.2,.9,.2,1);
-  pointer-events: none;
-}
-
-/* Hover карточки — эффект */
-.pricing-card:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 22px 60px rgba(0,0,0,0.6);
-  background: linear-gradient(180deg, rgba(3,7,40,0.95), rgba(6,4,30,0.95));
-  border-color: rgba(10,40,220,0.55);
-}
-
-/* при ховере верхняя полоса становится синей */
-.pricing-card:hover .top-bar{
-  background: var(--accent-blue);
-}
-
-/* при ховере чек-иконки и текст становятся более яркими */
-.pricing-card:hover .icon-check{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08));
-  color: var(--accent-pink);
-  transform: translateY(-3px) scale(1.02);
-  border-color: rgba(255,255,255,0.03);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.6), 0 0 18px rgba(255,36,215,0.06);
-}
-
-/* при ховере плавающий бейдж появляется */
-.pricing-card:hover .floating-badge{
-  opacity: 1;
-  transform: translateY(-50%) scale(1);
-  right: 26px;
-  background: linear-gradient(180deg, rgba(3,7,40,1), rgba(6,4,30,1));
-  border: 3px solid rgba(0,0,0,0.45);
-}
-
-/* кнопка ховер - меняет цвет (похожий на скрин) */
-.btn:hover{
-  background: var(--accent-pink);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(255,36,215,0.12);
-}
-
-/* маленький эффект на бейдж кнопки при ховере карточки */
-.pricing-card:hover .btn .btn-badge{
-  transform: translateX(6px) translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.06), rgba(0,0,0,0.25));
-}
-
-/* RESPONSIVE */
-@media (max-width: 960px){
-  .pricing-grid{ grid-template-columns: repeat(2,1fr); }
-  .pricing-card{ min-height: 340px; }
-}
-
-@media (max-width: 620px){
-  .pricing-grid{ grid-template-columns: 1fr; gap: 20px; }
-  .pricing-card{ min-height: 420px; }
-  .pricing-card .top-bar{ width: 100%; margin-left: 0; border-radius: 10px 10px 0 0; }
-  .btn{ width: 86%; font-size: 17px; }
-}
+.button-row {
+    border-bottom: none;
+} */
