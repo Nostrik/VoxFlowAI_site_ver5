@@ -16,69 +16,60 @@
     max-width: 425px;
     max-height: 503px;
     flex-grow: 1;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+}
+
+.plan_card_wrapper {
+  border: 1px solid #81007F;
+  border-radius: 14px;
+  margin-bottom: 19px;
 }
 
 .pricing_item_header, .plan_header {
+    padding: 8px 0px 8px 0px;
     font-family: 'Inter', sans-serif;
     font-weight: 100;
     font-size: 24px;
     line-height: 1.5;
     color: #BFBFBF;
+
+}
+
+.plan_header {
+  padding: 8px 0px 8px 0px;
+  background-color: #9640C1;
+  border-radius: 14px 14px 0 0;
+  /* border: 1px solid white; */
 }
 
 .pricing_item, .plan_pricing {
+    padding: 14px 0px 14px 0px;
     font-family: 'Inter', sans-serif;
     font-weight: 100;
     font-size: 18px;
     line-height: 1.5;
     color: #BFBFBF;
+    border-bottom: 1px solid #431A58;
 }
 
 .plan_header {
   text-align: center;
 }
 
-.plan_pricing {
+.plan_pricing:last-child {
   text-align: center;
+  border-radius: 0 0 14px 14px;
+  background-color: #190621;
 }
 
-.plan_card {
-  border-radius: 14px;
-}
-/*
-.feature-item, .plan-feature {
-    padding: 15px 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    min-height: 48px;
+.plan_pricing:not(:last-child) {
+  text-align: center;
+  background-color: #190621;
 }
 
-
-.plan-header {
-
-    background-color: #6a0dad; 
-    
-
-    color: #fff;
-    
-  
-    padding: 15px 10px;
-    
-    
-    text-align: center;
-    
-    
-    border-bottom: none; 
-    
-    
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+.plan_pricing_btn {
+  text-align: center;
+  width: 425px;
+  height: 38px;
+  padding: 6px 136px 6px 136px;
 }
-
-.button-row {
-    border-bottom: none;
-} */

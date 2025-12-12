@@ -1,0 +1,70 @@
+    <section class="section_pricing" id="pricing">
+      <div class="container">
+        <h1 class="section-title">тарифы</h1>
+        <div class="pricing_content">
+          <!-- Левая колонка с названиями услуг -->
+          <div class="pricing_list">
+            <div class="pricing_item_header">Услуга</div>
+            <div class="pricing_item">Создание скрипта</div>
+            <div class="pricing_item">Сборка сценария</div>
+            <div class="pricing_item">Кол_во задач в диалоге</div>
+            <div class="pricing_item">Кол_во входящих вопросов</div>
+            <div class="pricing_item">Обучение по платформе</div>
+            <div class="pricing_item">Пилотный запуск</div>
+            <div class="pricing_item">Создание детальной статус модели</div>
+            <div class="pricing_item">Скидки на обучение сотрудников</div>
+            <div class="pricing_item">Срок разработки</div>
+            <div class="pricing_item button_row"></div>
+          </div>
+          <!-- Колонка базовый -->
+          <div class="plan_card">
+            <div class="plan_card_wrapper">
+              <div class="plan_header">Базовый</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">1 задача в диалоге</div>
+              <div class="plan_pricing">до 15</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">От 2х недель</div>
+            </div>
+            <div class="button_row"><button class="button plan_pricing_btn">Узнать больше</button></div>
+          </div>
+          <!-- Колонка стандарт -->
+          <div class="plan_card">
+            <div class="plan_card_wrapper">
+              <div class="plan_header">Стандарт</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">До двух задач</div>
+              <div class="plan_pricing">до 35</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">От 3х недель</div>
+            </div>
+            <div class="button_row"><button class="button plan_pricing_btn">Узнать больше</button></div>
+          </div>
+          <!-- Колонка максимальный -->
+          <div class="plan_card">
+            <div class="plan_card_wrapper">
+              <div class="plan_header">Максимальный</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">Мультиканал</div>
+              <div class="plan_pricing">Неограничено</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">0</div>
+              <div class="plan_pricing">От 4х недель</div>
+            </div>
+            <div class="button_row"><button class="button plan_pricing_btn">Узнать больше</button></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
