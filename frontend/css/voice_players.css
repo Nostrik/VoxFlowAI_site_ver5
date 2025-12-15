@@ -1,0 +1,302 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.category-section h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 1;
+    color: #BFBFBF;
+}
+
+/* ---------------------------------- */
+/* Стилизация горизонтальной прокрутки */
+/* ---------------------------------- */
+.services-list-scrollable {
+    display: flex; /* Используем Flexbox для размещения карточек в ряд */
+    gap: 20px; /* Расстояние между карточками */
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    padding-bottom: 20px; /* Добавляем отступ снизу, чтобы скроллбар не перекрывал контент */
+    scroll-snap-type: x mandatory; /* Опционально: плавное "прилипание" при прокрутке */
+}
+
+/* Стилизация самого скроллбара (для Webkit-браузеров) */
+.services-list-scrollable::-webkit-scrollbar {
+    height: 8px;
+}
+
+.services-list-scrollable::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.services-list-scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+/* Для Firefox */
+.services-list-scrollable {
+    scrollbar-width: none; /* Скрывает полосу прокрутки в Firefox */
+}
+
+/* Для Chrome, Safari и Opera */
+.services-list-scrollable::-webkit-scrollbar {
+    display: none; /* Полностью скрывает скроллбар в Webkit-браузерах */
+}
+
+/* Опционально: Обертка для надежного скрытия в некоторых случаях */
+.services-list-wrapper {
+    overflow: hidden; /* Скрывает содержимое, выходящее за пределы блока */
+    padding-bottom: 20px; /* Добавляет пространство, которое занимал бы скроллбар */
+}
+
+.services-list-scrollable {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    /* Добавьте эту строку для плавной прокрутки */
+    scroll-behavior: smooth; 
+    /* ... (остальные стили для скрытия скроллбара) ... */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
+/* ---------------------------------- */
+/* Стилизация карточек плеера */
+/* ---------------------------------- */
+.service-item {
+    /* padding-top: 0;
+    padding-bottom: 16px; */
+    padding: 0 10px 16px 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color: #BFBFBF;
+    background: #190621;
+    border: 1px solid #9640C1;
+    border-radius: 10px;
+    padding: 15px;
+    width: 270px;
+    height: 105px;
+    flex-shrink: 0; /* Важно: запрещаем элементам сжиматься */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    scroll-snap-align: start; /* Опционально: "прилипание" к началу карточки */
+}
+
+.service-name {
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color: #BFBFBF;
+}
+
+.service-item2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color: #BFBFBF;
+    background: #190621;
+    border: 1px solid #9640C1;
+    /* border-radius: 10px; */
+    /* padding: 15px; */
+    width: 306px; /* Задаем фиксированную ширину, чтобы они не сжимались */
+    height: 405px;
+    flex-shrink: 0; /* Важно: запрещаем элементам сжиматься */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    scroll-snap-align: start; /* Опционально: "прилипание" к началу карточки */
+}
+
+.service-item2 p {
+    margin-left: 10px;
+}
+
+.service-chat-window {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+    background: #C78181;
+    width: 286px;
+    height: 353px;
+}
+
+/* ---------------------------------- */
+/* Стилизация элементов управления плеером */
+/* ---------------------------------- */
+
+    .service-item {
+        background-color: #190621;
+        border-radius: 12px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 0;
+        width: 270px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    .play-pause-btn {
+        margin-right: 15px;
+        width: 40px;
+        border-radius: 30px;
+        background-color: #BFBFBF;
+     }
+    .current-time {
+        margin-right: 15px;
+        padding-top: 9px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1;
+        color: #000000;
+    }
+
+    /* Контейнер эквалайзера */
+    .eq-container {
+        padding-top: 16px;
+        flex-grow: 1; /* Занимает все оставшееся место */
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Равномерное распределение баров */
+        background-color: #9b59b6; /* Яркий фиолетовый фон */
+        border-radius: 10px;
+        height: 10px; /* Общая высота контейнера эквалайзера */
+        /* padding: 0 5px; */
+    }
+
+    /* Стиль для отдельного бара эквалайзера */
+    .eq-bar {
+        width: 3px; /* Ширина бара */
+        background-color: #fff;
+        border-radius: 1px;
+        /* Переход для плавной анимации высоты */
+        transition: height 0.1s ease-in-out; 
+    }
+
+    /* Класс для скрытия иконок SVG */
+    .is-hidden {
+        display: none !important;
+    }
+
+
+
+.player-back {
+    display: flex;
+    width: 250px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #9640C1;
+}
+
+.playback-controls {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.play-icon {
+    width: 24px;
+    height: 24px;
+    fill: #007BFF; /* Цвет иконки */
+    cursor: pointer;
+    transition: fill 0.2s;
+}
+
+.play-icon:hover {
+    fill: #0056b3;
+}
+
+.progress-bar {
+    flex-grow: 1; /* Занимает все доступное пространство */
+    cursor: pointer;
+    /* Базовый сброс стилей для input range */
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+/* Стилизация ползунка в Webkit (Chrome, Safari) */
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #007BFF;
+  cursor: pointer;
+  margin-top: -6px; /* Выравнивание по центру трека */
+}
+
+/* Стилизация трека в Webkit */
+.progress-bar::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 2px;
+}
+
+
+/* ---------------------------------- */
+/* Стилизация навигации (стрелки и точки) */
+/* ---------------------------------- */
+/* .navigation-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+} */
+
+.navigation-controls {
+    display: flex;
+    justify-content: center; /* Центрирует всю группу */
+    align-items: center;
+    margin-top: 30px; 
+    gap: 189px; /* Уменьшает расстояние между стрелками и точками */
+}
+
+.nav-arrow {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.nav-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    margin-right: 19px;
+}
+
+.dot.active {
+    /* background: #007BFF; */
+}
+
+#arrow-left { left: -40px; }
+#arrow-right { right: -40px; }
+
+/* .arrow-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+} */
+
+.arrow.is-hidden {
+    visibility: hidden; /* Элемент невидим, но занимает место */
+    /* или можно использовать opacity: 0; pointer-events: none; для того же эффекта */
+}

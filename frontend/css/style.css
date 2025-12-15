@@ -213,7 +213,7 @@ nav a:last-child {
 }
 
 .features-title {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 14px;
 }
 
@@ -506,6 +506,16 @@ textarea {
 .partner-logo img {
     width: 101px;
     height: 37px;
+}
+
+/* Секция примеры работ */
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 1.5;
+    color: #BFBFBF;
 }
 
 /* Секция 4: Отзывы клиентов */
