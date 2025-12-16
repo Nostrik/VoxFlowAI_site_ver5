@@ -147,13 +147,15 @@
     }
     .play-pause-btn {
         margin-right: 15px;
+        padding-top: 3px;
         width: 40px;
+        height: 40px;
         border-radius: 30px;
         background-color: #BFBFBF;
      }
     .current-time {
         margin-right: 15px;
-        padding-top: 9px;
+        /* padding-top: 9px; */
         font-family: 'Inter', sans-serif;
         font-weight: 400;
         font-size: 18px;
@@ -163,20 +165,25 @@
 
     /* Контейнер эквалайзера */
     .eq-container {
-        padding-top: 16px;
+        padding-top: 7px;
+        max-width: 134px;
         flex-grow: 1; /* Занимает все оставшееся место */
         display: flex;
         align-items: center;
         justify-content: space-between; /* Равномерное распределение баров */
-        background-color: #9b59b6; /* Яркий фиолетовый фон */
         border-radius: 10px;
         height: 10px; /* Общая высота контейнера эквалайзера */
-        /* padding: 0 5px; */
     }
+
+    /* .eq-container div {
+        width: 8px;
+        height: 8px
+    } */
 
     /* Стиль для отдельного бара эквалайзера */
     .eq-bar {
-        width: 3px; /* Ширина бара */
+        width: 7px;
+        margin-right: 3px;
         background-color: #fff;
         border-radius: 1px;
         /* Переход для плавной анимации высоты */
@@ -192,6 +199,8 @@
 
 .player-back {
     display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
     width: 250px;
     height: 40px;
     border-radius: 30px;
