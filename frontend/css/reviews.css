@@ -1,0 +1,119 @@
+/* Общие стили для секции */
+.section_reviews {
+    /* background-color: #0d0d1a; */
+    padding: 40px 20px;
+    color: #ffffff; /* Белый цвет текста по умолчанию */
+    font-family: sans-serif;
+}
+
+.reviews_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.add-review-button:hover {
+    background-color: #51078a;
+}
+
+/* Контейнер для карточек с прокруткой */
+.reviews-container {
+    display: flex;
+    gap: 20px; /* Расстояние между карточками */
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    padding: 0 10px 20px 10px; /* Отступ снизу для полосы прокрутки */
+    scrollbar-width: thin; /* Стандартное свойство для Firefox */
+    scrollbar-color: #6a0dad #1a1a2e; /* Цвет бегунка и дорожки для Firefox */
+}
+
+/* Стилизация полосы прокрутки для Webkit-браузеров (Chrome, Safari, Edge) */
+.reviews-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+    background-color: #6a0dad; /* Фиолетовый бегунок */
+    border-radius: 4px;
+}
+
+.reviews-container::-webkit-scrollbar-track {
+    background-color: #1a1a2e; /* Темная дорожка */
+}
+
+/* Стиль отдельной карточки отзыва */
+.review-card {
+    flex: 0 0 auto; /* Предотвращает сжатие и определяет базовый размер */
+    width: 413px; /* Фиксированная ширина карточки */
+    background-color: blue;
+    padding: 0;
+    /* border-radius: 15px; */
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    transition: transform 0.3s ease; /* Плавное перемещение при наведении */
+    white-space: normal; /* Разрешает перенос текста внутри карточки */
+}
+
+.review-card-wrapper {
+    position: relative;
+    background-color: #190621;
+    border: 1px solid #6a0dad;
+    border-radius: 45px;
+}
+
+.review-card-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Располагаем хвостик под блоком */
+    left: 40px; /* Смещаем хвостик влево, чтобы он не был строго по центру */
+    width: 0;
+    height: 0;
+    /* Создаем треугольник с помощью границ */
+    border: 15px solid transparent; 
+    border-top-color: #310850; /* Цвет хвостика должен совпадать с фоном карточки */
+    border-bottom: 0; /* Удаляем нижнюю границу */
+}
+
+.review-card-wrapper p {
+    padding-top: 19px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 34px;
+}
+/* .review-card:hover {
+    transform: translateY(-5px);
+} */
+
+.review-text {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #BFBFBF;
+    /* margin-bottom: 20px; */
+}
+
+.review-meta {
+    padding-top: 19px;
+    padding-left: 34px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1;
+    color: #BFBFBF;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .reviewer-name {
+    font-weight: bold;
+    color: #ffffff;
+} */
+
+.reviewer-location {
+    color: #a0a0a0;
+}
