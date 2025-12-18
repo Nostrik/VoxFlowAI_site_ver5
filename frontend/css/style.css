@@ -519,8 +519,8 @@ h3 {
 }
 
 /* Секция 4: Отзывы клиентов */
-#testimonials {
-    background-color: var(--background-light);
+.section_cases {
+    margin-bottom: 30px;
 }
 
 /* Секция 5: Форма обратной связи / CTA */
