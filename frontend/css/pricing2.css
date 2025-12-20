@@ -24,8 +24,6 @@
 }
 
 .plan_card_wrapper {
-  /* border: 1px solid #81007F; */ /* Удалено для сквозных линий */
-  /* border-radius: 14px; */ /* Удалено для сквозных линий */
   margin-bottom: 19px;
   position: relative;
 }
@@ -57,26 +55,24 @@
     font-size: 18px;
     line-height: 1.5;
     color: #BFBFBF;
-    /* Удаляем стандартную границу и позиционируем псевдоэлемент */
-    /* border-bottom: 1px solid #431A58; */
     position: relative; 
 }
 
 /* Создаем эффект сквозной линии с градиентом через псевдоэлемент ::after */
 .pricing_item::after, .plan_pricing::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(
-        to right, 
-        rgba(129, 0, 127, 0) 0%,      /* Прозрачный слева */
-        #81007F 30%,                 /* Яркий цвет к центру */
-        #81007F 70%,                 /* Яркий цвет от центра */
-        rgba(129, 0, 127, 0) 100%    /* Прозрачный справа */
-    );
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+      to right, 
+      rgba(129, 0, 127, 0) 0%,      /* Прозрачный слева */
+      #81007F 30%,                 /* Яркий цвет к центру */
+      #81007F 70%,                 /* Яркий цвет от центра */
+      rgba(129, 0, 127, 0) 100%    /* Прозрачный справа */
+  );
 }
 
 /* Скрываем линию под последним элементом в списке */
@@ -103,3 +99,27 @@
   height: 38px;
   padding: 6px 136px 6px 136px;
 }
+
+.plan_pricing_none {
+  height: 26px;
+}
+
+/* .plan_pricing_wrapper {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.plan_pricing_spacer {
+  width: 40px;
+  height: 40px;
+  visibility: hidden;
+}
+
+.absolute-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */

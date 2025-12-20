@@ -16,9 +16,12 @@
     padding: 0 10px;
 }
 
-.add-review-button {
-    
+.reviews_header a {
+    width: 295px;
+    text-align: center;
+    text-decoration: none;
 }
+    
 
 .add-review-button:hover {
     background-color: #51078a;
@@ -33,20 +36,6 @@
     scrollbar-color: #6a0dad #1a1a2e; /* Цвет бегунка и дорожки для Firefox */
 }
 
-/* Стилизация полосы прокрутки для Webkit-браузеров (Chrome, Safari, Edge) */
-.reviews-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.reviews-container::-webkit-scrollbar-thumb {
-    background-color: #6a0dad; /* Фиолетовый бегунок */
-    border-radius: 4px;
-}
-
-.reviews-container::-webkit-scrollbar-track {
-    background-color: #1a1a2e; /* Темная дорожка */
-}
-
 .reviews_cards {
     font-family: 'Inter', sans-serif;
     font-weight: 100;
@@ -58,6 +47,10 @@
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: #9640C1 #190621;
+}
+
+.reviews_cards::-webkit-scrollbar-thumb {
+    width: 1px;
 }
 
 .reviews_cards::-webkit-scrollbar-track {

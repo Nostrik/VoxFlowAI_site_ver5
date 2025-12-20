@@ -25,26 +25,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
 
             // Функция для проверки позиции и скрытия стрелок (использует класс 'is-hidden' в CSS)
-            const checkScrollPosition = () => {
-                // Проверяем начало прокрутки 
-                if (list.scrollLeft <= tolerance) {
-                    leftArrow.classList.add('is-hidden');
-                } else {
-                    leftArrow.classList.remove('is-hidden');
-                }
+            // const checkScrollPosition = () => {
+            //     // Проверяем начало прокрутки 
+            //     if (list.scrollLeft <= tolerance) {
+            //         leftArrow.classList.add('is-hidden');
+            //     } else {
+            //         leftArrow.classList.remove('is-hidden');
+            //     }
 
                 // Проверяем конец прокрутки с допуском
-                const maxScrollLeft = list.scrollWidth - list.clientWidth;
-                if (Math.round(list.scrollLeft) >= maxScrollLeft - tolerance) {
-                    rightArrow.classList.add('is-hidden');
-                } else {
-                    rightArrow.classList.remove('is-hidden');
-                }
-            };
+            //     const maxScrollLeft = list.scrollWidth - list.clientWidth;
+            //     if (Math.round(list.scrollLeft) >= maxScrollLeft - tolerance) {
+            //         rightArrow.classList.add('is-hidden');
+            //     } else {
+            //         rightArrow.classList.remove('is-hidden');
+            //     }
+            // };
 
             // Привязываем проверку к событию прокрутки и вызываем сразу при загрузке
-            list.addEventListener('scroll', checkScrollPosition);
-            checkScrollPosition();
+            // list.addEventListener('scroll', checkScrollPosition);
+            // checkScrollPosition();
         }
 
         // --- 2. Логика Intersection Observer для активных точек (Локальная для этого списка) ---

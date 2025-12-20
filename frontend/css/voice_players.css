@@ -81,7 +81,8 @@
     font-size: 18px;
     line-height: 1;
     color: #BFBFBF;
-    background: #190621;
+    /* background: #190621; */
+    background: rgba(19, 6, 21, 0.9);
     border: 1px solid #9640C1;
     border-radius: 10px;
     padding: 15px;
@@ -90,6 +91,13 @@
     flex-shrink: 0; /* Важно: запрещаем элементам сжиматься */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     scroll-snap-align: start; /* Опционально: "прилипание" к началу карточки */
+    transition: background-color 0.6s ease, transform 0.3s ease;
+}
+
+.service-item:hover {
+    /* background-color: #000298; */
+    background-color: rgba(0, 2, 152, 0.2);
+    border: 1px solid #000298;
 }
 
 .service-name {
@@ -205,6 +213,11 @@
     height: 40px;
     border-radius: 30px;
     background-color: #9640C1;
+    transition: background-color 0.6s ease, transform 0.3s ease;
+}
+
+.player-back:hover {
+    background-color: #8429D2;
 }
 
 .playback-controls {
