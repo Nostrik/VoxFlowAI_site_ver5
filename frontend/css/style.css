@@ -297,7 +297,7 @@ nav a:last-child {
 }
 
 ul {
-    white-space: nowrap;
+    /* white-space: nowrap; */
     list-style-type: none;
     margin: 0;
     padding: 0;
