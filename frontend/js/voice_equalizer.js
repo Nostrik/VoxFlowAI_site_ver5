@@ -1,61 +1,94 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const item = document.querySelector('.service-item');
-    const playPauseBtn = item.querySelector('.play-pause-btn');
-    const iconPlay = item.querySelector('.icon-play');
-    const iconPause = item.querySelector('.icon-pause');
-    const eqContainer = item.querySelector('.eq-container');
-    
-    let isPlaying = false;
-    const totalBars = 20;
-    let intervalId;
+    let activePlayer = null;
 
-    // --- 1. Генерация баров эквалайзера ---
-    function generateBars() {
-        for (let i = 0; i < totalBars; i++) {
-            const bar = document.createElement('div');
-            bar.classList.add('eq-bar');
-            eqContainer.appendChild(bar);
+    document.querySelectorAll('.service-item').forEach(item => {
+        initPlayer(item);
+    });
+
+    function initPlayer(item) {
+        const playPauseBtn = item.querySelector('.play-pause-btn');
+        const iconPlay = item.querySelector('.icon-play');
+        const iconPause = item.querySelector('.icon-pause');
+        const eqContainer = item.querySelector('.eq-container');
+        const currentTimeEl = item.querySelector('.current-time');
+
+        const audioSrc = item.dataset.audio;
+        if (!audioSrc) return;
+
+        const audio = new Audio(audioSrc);
+        const totalBars = 15;
+        let intervalId = null;
+
+        function formatTime(seconds) {
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min}:${sec.toString().padStart(2, '0')}`;
         }
-    }
 
-    // --- 2. Анимация высоты баров (имитация звука) ---
-    function animateBars() {
-        const bars = eqContainer.querySelectorAll('.eq-bar');
-        const containerHeight = eqContainer.clientHeight; // Высота родительского контейнера (10px)
+        function generateBars() {
+            for (let i = 0; i < totalBars; i++) {
+                const bar = document.createElement('div');
+                bar.classList.add('eq-bar');
+                bar.style.height = '6px';
+                eqContainer.appendChild(bar);
+            }
+        }
 
-        bars.forEach((bar) => {
-            // Генерируем случайную высоту от 10% до 100% высоты контейнера
-            const randomHeight = Math.random() * (containerHeight * 0.9) + (containerHeight * 0.1);
-            bar.style.height = `${randomHeight}px`;
-        });
-    }
+        function animateBars() {
+            eqContainer.querySelectorAll('.eq-bar').forEach((bar, index) => {
+                const base = Math.abs(Math.sin(Date.now() / 300 + index));
+                bar.style.height = `${6 + base * 10}px`;
+            });
+        }
 
-    // --- 3. Переключение состояния Play/Pause ---
-    function togglePlayPause() {
-        isPlaying = !isPlaying;
+        function resetBars() {
+            eqContainer.querySelectorAll('.eq-bar')
+                .forEach(bar => bar.style.height = '6px');
+        }
 
-        if (isPlaying) {
-            iconPlay.classList.add('is-hidden');
-            iconPause.classList.remove('is-hidden');
-            // Начинаем анимацию эквалайзера
-            intervalId = setInterval(animateBars, 100); // Обновляем каждые 100мс
-        } else {
+        function stopPlayer() {
+            audio.pause();
+            audio.currentTime = 0;
+            clearInterval(intervalId);
+            resetBars();
+
             iconPlay.classList.remove('is-hidden');
             iconPause.classList.add('is-hidden');
-            // Останавливаем анимацию
-            clearInterval(intervalId);
-            // Сбрасываем высоту баров до минимума при остановке
-            const bars = eqContainer.querySelectorAll('.eq-bar');
-            bars.forEach(bar => bar.style.height = '1px'); 
+
+            currentTimeEl.textContent = '0:00';
         }
+
+        playPauseBtn.addEventListener('click', () => {
+
+            // ⛔ останавливаем предыдущий плеер
+            if (activePlayer && activePlayer !== stopPlayer) {
+                activePlayer();
+            }
+
+            if (audio.paused) {
+                audio.play();
+                activePlayer = stopPlayer;
+
+                iconPlay.classList.add('is-hidden');
+                iconPause.classList.remove('is-hidden');
+
+                intervalId = setInterval(animateBars, 100);
+            } else {
+                stopPlayer();
+                activePlayer = null;
+            }
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+        });
+
+        audio.addEventListener('ended', () => {
+            stopPlayer();
+            activePlayer = null;
+        });
+
+        generateBars();
     }
-
-    // --- 4. Привязка событий и инициализация ---
-    playPauseBtn.addEventListener('click', togglePlayPause);
-    generateBars();
-    // Устанавливаем начальную минимальную высоту
-    const initialBars = eqContainer.querySelectorAll('.eq-bar');
-    initialBars.forEach(bar => bar.style.height = '1px'); 
-
 });
