@@ -17,7 +17,7 @@
     <section id="header">
       <div class="container">
         <div class="logo">VoxFlowAI</div>
-        <nav>
+        <nav class="header_nav">
           <a href="#features">Почему мы</a>
           <a href="#pricing">Тарифы</a>
           <a href="#workflow">Этапы работы</a>
@@ -54,6 +54,11 @@
         </svg>
            </a>
         </div>
+        <button class="burger-icon" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </button>
       </div>  
     </section>
 
@@ -306,6 +311,10 @@
 <path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
 </svg>
 </span>
+<span class="arrow-second"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
+</svg>
+</span>
           <!-- Этап 5 -->
             <div class="workflow-step">
               <div class="workflow-step-wrapper">
@@ -347,7 +356,7 @@
       <div class="container">
         <div class="about_us_content">
           <div class="about_us_left">
-            <img src="./img/about_us_1920.png" alt="about_us">
+            <img class="about-us-img" src="./img/about_us_1920.png" alt="about_us">
           </div>
           <div class="about_us_right">
             <h1 class="section-title features-title">о нас</h1>
@@ -943,6 +952,7 @@
           <p class="copyright">Copyright © 2025 VoxFlowAI Все права защищены.</p>
         </div>
     </section>
+      <script src="./js/burger_menu.js"></script>
       <script src="./js/voice_scroll.js"></script>
       <script src="./js/voice_equalizer.js"></script>
       <!-- <script>

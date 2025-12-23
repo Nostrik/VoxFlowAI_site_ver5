@@ -58,7 +58,8 @@ h1, h2, h3 {
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-weight: 100;
-    font-size: 60px;
+    font-size: clamp(2rem, 1.3636rem + 3.1818vw, 3.75rem);
+    /* font-size: 60px; */
     line-height: 1;
     color: #BFBFBF;
 }
@@ -114,7 +115,8 @@ input[type="submit"] {
     border-radius: 8px;
     font-family: sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: clamp(1rem, 0.9091rem + 0.4545vw, 1.25rem);
+    /* font-size: 20px; */
     color: #ffffff;
     transition: background-color 0.6s ease, transform 0.3s ease;
 }
@@ -150,7 +152,8 @@ input[type="submit"] {
     background-color: #190621; 
     border-bottom: 1px solid #81007F;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    /* font-size: 18px;, */
+    font-size: clamp(0.9375rem, 0.8693rem + 0.3409vw, 1.125rem);
     color: #BFBFBF;
 }
 
@@ -197,6 +200,59 @@ nav a:last-child {
     display: flex; /* Помогает выравниванию иконок */
 }
 
+/* .burger-icon {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 50px;
+    height: 6px;
+    background-color: #BFBFBF;
+    transition: 0.4s;
+}
+
+.bar:not(:last-child) {
+    margin-bottom: 10px;
+} */
+.burger-icon {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.bar {
+    display: block;
+    width: 50px;
+    height: 6px;
+    background-color: #BFBFBF;
+    transition: 0.4s;
+}
+
+.bar:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* --- АНИМАЦИЯ ПРИ КЛИКЕ --- */
+
+/* 1. Верхняя линия: едет вниз на 16px (высота линии 6 + отступ 10) и крутится */
+.burger-icon.active .bar:nth-child(1) {
+    transform: translateY(16px) rotate(45deg);
+}
+
+/* 2. Средняя линия: исчезает */
+.burger-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+/* 3. Нижняя линия: едет вверх на 16px и крутится в обратную сторону */
+.burger-icon.active .bar:nth-child(3) {
+    transform: translateY(-16px) rotate(-45deg);
+}
 
 
 /* --- Стили для конкретных секций по ID и Flexbox --- */
@@ -223,6 +279,7 @@ nav a:last-child {
 }
 
 .hero_content_wrapper {
+    margin-right: 10px;
     max-width: 870px;
     display: flex;
     flex-direction: column;
@@ -244,7 +301,8 @@ nav a:last-child {
 .section-subtitle {
     font-family: 'Inter', sans-serif;
     font-weight: 100;
-    font-size: 18px;
+    font-size: clamp(0.9375rem, 0.8693rem + 0.3409vw, 1.125rem);
+    /* font-size: 18px; */
     line-height: 1.5;
     color: #BFBFBF;
     margin: 0;
@@ -459,7 +517,7 @@ textarea {
 .workflow-step {
     margin-right: 10px;
     margin-left: 46px;
-    width: 181.14px;
+    max-width: 181.14px;
     height: 410px;
     /* border: 1px solid white; */
 }
@@ -486,6 +544,11 @@ textarea {
 }
 
 .arrow {
+    padding-top: 50px;
+}
+
+.arrow-second {
+    display: none;
     padding-top: 50px;
 }
 
