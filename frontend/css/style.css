@@ -273,15 +273,20 @@ nav a:last-child {
 }
 
 .hero-img {
-    max-width: 870px;
-    /* max-height: 522px; */
+    flex: 5;
+    width: 100%;
     aspect-ratio: 870 / 522;
+    background-image: url('../img/hero_1920.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero_content_wrapper {
     margin-right: 10px;
     max-width: 870px;
     display: flex;
+    flex: 5;
     flex-direction: column;
     justify-content: center;
 }
@@ -337,8 +342,16 @@ nav a:last-child {
 }
 
 .features-img {
+    width: 100%;
     max-width: 870px;
     aspect-ratio: 870 / 432;
+    background-image: url('../img/features_1920.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-grow: 1;
+    flex: 5;
+    margin-right: 20px;
 }
 
 .features_content {
@@ -346,12 +359,14 @@ nav a:last-child {
     justify-content: space-between;
 }
 
-.features_content_left {
+/* .features_content_left {
+    flex-grow: 1;
     margin-right: 20px;
-}
+} */
 
 .features_content_right {
-    max-width: 870px;
+    /* width: 870px; */
+    flex: 5;
 }
 
 ul {
@@ -389,6 +404,11 @@ ul svg {
     max-width: 870px;
     margin-right: 20px;
     flex-grow: 1;
+    flex: 5;
+}
+
+.cont_content_right {
+    flex: 5;
 }
 
 .cont_content_rigth_title {
@@ -401,8 +421,8 @@ ul svg {
 }
 
 .cont_content_right a {
-    text-decoration: none; /* <-- ЭТО УБИРАЕТ ПОДЧЕРКИВАНИЕ */
-    color: #BFBFBF; /* Делаем текст ссылок темным */
+    text-decoration: none;
+    color: #BFBFBF;
     transition: color 0.3s ease;
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -419,7 +439,11 @@ ul svg {
 .contact-img {
     margin-bottom: 10px;
     max-width: 870px;
+    width: 100%;
     aspect-ratio: 870 / 404;
+    background-image: url('../img/contact_1920.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .form-title {
@@ -516,10 +540,9 @@ textarea {
 
 .workflow-step {
     margin-right: 10px;
-    margin-left: 46px;
+    margin-left: 38px;
     max-width: 181.14px;
     height: 410px;
-    /* border: 1px solid white; */
 }
 
 .workflow_content .workflow-step:first-child {
@@ -561,12 +584,24 @@ textarea {
 }
 
 .about_us_right {
-    max-width: 870px;
+    /* max-width: 870px; */
+    flex: 5;
 }
 
-.about_us_left img {
+/* .about_us_left img {
     max-width: 870px;
     aspect-ratio: 870 / 275;
+} */
+
+.about-us-img {
+    margin-right: 20px;
+    flex: 5;
+    width: 100%;
+    aspect-ratio: 870 / 275;
+    background-image: url('../img/about_us_1920.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .card-description {
