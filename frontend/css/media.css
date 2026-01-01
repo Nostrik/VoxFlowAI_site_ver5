@@ -68,15 +68,11 @@
   .header_nav {
     display: none;
   }
-  /* .burger-icon {
-    display: block;
-    cursor: pointer;
-    background: none;
-    border: none;
-    } */
   .burger-icon {
     display: flex;
   }
+  
+
   .hero-img {
     box-sizing: border-box;
     width: 359px;

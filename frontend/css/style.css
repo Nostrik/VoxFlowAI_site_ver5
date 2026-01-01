@@ -39,9 +39,6 @@ html {
 }
 
 body {
-    /* font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color); */
     background-color: #070710;
     margin: 0;
 }
@@ -105,6 +102,10 @@ input[type="submit"] {
     max-width: 1760px; /* Максимальная ширина контента (часто 1140px, 1200px или 1400px) */
     margin: 0 auto;    /* Центрирует контейнер на странице (устанавливает равные отступы слева и справа) */
     width: 100%;       /* Гарантирует, что контейнер занимает всю доступную ширину до max-width */
+}
+
+.burger-nav {
+    display: none;
 }
 
 .button {
@@ -252,6 +253,10 @@ nav a:last-child {
 /* 3. Нижняя линия: едет вверх на 16px и крутится в обратную сторону */
 .burger-icon.active .bar:nth-child(3) {
     transform: translateY(-16px) rotate(-45deg);
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 

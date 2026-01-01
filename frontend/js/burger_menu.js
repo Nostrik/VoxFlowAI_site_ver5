@@ -38,10 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerButton = document.getElementById('burger');
     const navMenu = document.querySelector('.header_nav');
     const headerContainer = document.querySelector('#header .container');
-    const navLinks = document.querySelectorAll('.header_nav a'); // Все пункты меню
+    const navLinks = document.querySelectorAll('.header_nav a');
+    const hideSection = document.querySelectorAll('.hide-section');
+    const body = document.body;
 
     // Функция открытия/закрытия
     function toggleMenu() {
+        hideSection.forEach(section => {
+        section.classList.toggle('close');
+    });
+        body.classList.toggle('no-scroll');
         burgerButton.classList.toggle('active'); 
         navMenu.classList.toggle('open');        
         headerContainer.classList.toggle('menu-active');
@@ -64,3 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// const burger = document.getElementById('burger-icon');
+// const menu = document.getElementById('header_nav');
+
+// burger.addEventListener('click', () => {
+//     burger.classList.toggle('active');
+//     menu.classList.toggle('active');
+//     document.body.classList.toggle('no-scroll');
+// });
