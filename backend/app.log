@@ -1,0 +1,241 @@
+2026-01-23 14:16:12,805 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2026-01-23 14:16:12,806 [INFO] sqlalchemy.engine.Engine: COMMIT
+2026-01-23 14:18:41,961 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2026-01-23 14:18:41,961 [INFO] sqlalchemy.engine.Engine: COMMIT
+2026-01-23 14:20:15,001 [INFO] app.main: get root is OK
+2026-01-23 14:20:40,369 [INFO] app.main: api/healthcheck is OK
+2026-01-23 14:25:52,324 [INFO] app.main: api/healthcheck is OK
+2026-01-23 14:26:20,695 [INFO] app.main: get root is OK
+2026-01-23 14:29:04,104 [INFO] app.main: get root is OK
+2026-01-23 14:29:05,264 [INFO] app.main: get root is OK
+2026-01-23 14:29:05,736 [INFO] app.main: get root is OK
+2026-01-23 14:29:05,987 [INFO] app.main: get root is OK
+2026-01-23 14:29:06,114 [INFO] app.main: get root is OK
+2026-01-23 14:29:06,245 [INFO] app.main: get root is OK
+2026-01-23 14:29:06,384 [INFO] app.main: get root is OK
+2026-01-23 14:29:06,527 [INFO] app.main: get root is OK
+2026-01-23 14:29:06,673 [INFO] app.main: get root is OK
+2026-01-23 14:29:06,811 [INFO] app.main: get root is OK
+2026-01-23 14:29:06,948 [INFO] app.main: get root is OK
+2026-01-23 14:29:07,143 [INFO] app.main: get root is OK
+2026-01-23 14:29:30,735 [INFO] app.main: get root is OK
+2026-01-23 14:29:31,968 [INFO] app.main: get root is OK
+2026-01-23 14:29:32,453 [INFO] app.main: get root is OK
+2026-01-23 14:29:32,592 [INFO] app.main: get root is OK
+2026-01-23 14:29:32,741 [INFO] app.main: get root is OK
+2026-01-23 14:29:32,903 [INFO] app.main: get root is OK
+2026-01-23 14:29:33,054 [INFO] app.main: get root is OK
+2026-01-23 14:29:33,333 [INFO] app.main: get root is OK
+2026-01-23 14:29:33,469 [INFO] app.main: get root is OK
+2026-01-23 14:29:34,874 [INFO] app.main: get root is OK
+2026-01-23 14:31:16,469 [INFO] app.main: get root is OK
+2026-01-23 14:31:17,483 [INFO] app.main: get root is OK
+2026-01-23 14:31:17,753 [INFO] app.main: get root is OK
+2026-01-23 14:31:18,009 [INFO] app.main: get root is OK
+2026-01-23 14:31:18,138 [INFO] app.main: get root is OK
+2026-01-23 14:31:18,269 [INFO] app.main: get root is OK
+2026-01-23 14:31:18,406 [INFO] app.main: get root is OK
+2026-01-23 14:31:18,546 [INFO] app.main: get root is OK
+2026-01-23 14:31:18,703 [INFO] app.main: get root is OK
+2026-01-23 14:31:18,865 [INFO] app.main: get root is OK
+2026-01-23 14:31:19,025 [INFO] app.main: get root is OK
+2026-01-23 14:31:19,155 [INFO] app.main: get root is OK
+2026-01-23 14:31:19,296 [INFO] app.main: get root is OK
+2026-01-23 14:31:19,429 [INFO] app.main: get root is OK
+2026-01-23 14:31:19,734 [INFO] app.main: get root is OK
+2026-01-23 14:31:20,008 [INFO] app.main: get root is OK
+2026-01-23 14:31:20,147 [INFO] app.main: get root is OK
+2026-01-23 14:31:20,304 [INFO] app.main: get root is OK
+2026-01-23 14:31:20,462 [INFO] app.main: get root is OK
+2026-01-23 14:32:27,996 [INFO] app.main: get root is OK
+2026-01-23 14:32:29,120 [INFO] app.main: get root is OK
+2026-01-23 14:32:29,266 [INFO] app.main: get root is OK
+2026-01-23 14:32:29,394 [INFO] app.main: get root is OK
+2026-01-23 14:32:29,516 [INFO] app.main: get root is OK
+2026-01-23 14:32:29,666 [INFO] app.main: get root is OK
+2026-01-23 14:32:29,790 [INFO] app.main: get root is OK
+2026-01-23 14:32:29,932 [INFO] app.main: get root is OK
+2026-01-23 14:32:30,173 [INFO] app.main: get root is OK
+2026-01-23 14:32:30,417 [INFO] app.main: get root is OK
+2026-01-23 14:32:30,540 [INFO] app.main: get root is OK
+2026-01-23 14:32:30,786 [INFO] app.main: get root is OK
+2026-01-23 14:32:31,545 [INFO] app.main: get root is OK
+2026-01-23 14:32:31,980 [INFO] app.main: get root is OK
+2026-01-23 14:32:32,158 [INFO] app.main: get root is OK
+2026-01-23 14:32:32,303 [INFO] app.main: get root is OK
+2026-01-23 14:32:32,437 [INFO] app.main: get root is OK
+2026-01-23 14:32:32,588 [INFO] app.main: get root is OK
+2026-01-23 14:32:32,730 [INFO] app.main: get root is OK
+2026-01-23 14:32:32,868 [INFO] app.main: get root is OK
+2026-01-23 14:32:33,022 [INFO] app.main: get root is OK
+2026-01-23 14:32:52,252 [INFO] app.main: get root is OK
+2026-01-23 14:35:58,518 [INFO] app.main: get root is OK
+2026-01-23 14:35:59,613 [INFO] app.main: get root is OK
+2026-01-23 14:35:59,789 [INFO] app.main: get root is OK
+2026-01-23 14:35:59,928 [INFO] app.main: get root is OK
+2026-01-23 14:36:00,068 [INFO] app.main: get root is OK
+2026-01-23 14:36:00,206 [INFO] app.main: get root is OK
+2026-01-23 14:36:00,440 [INFO] app.main: get root is OK
+2026-01-23 14:36:00,611 [INFO] app.main: get root is OK
+2026-01-23 14:37:50,025 [INFO] app.main: get root is OK
+2026-01-23 14:37:50,766 [INFO] app.main: get root is OK
+2026-01-23 14:37:50,920 [INFO] app.main: get root is OK
+2026-01-23 14:37:51,067 [INFO] app.main: get root is OK
+2026-01-23 14:37:51,194 [INFO] app.main: get root is OK
+2026-01-23 14:37:51,318 [INFO] app.main: get root is OK
+2026-01-23 14:37:51,481 [INFO] app.main: get root is OK
+2026-01-23 14:38:06,408 [INFO] app.main: get root is OK
+2026-01-23 14:38:08,111 [INFO] app.main: get root is OK
+2026-01-23 14:38:09,794 [INFO] app.main: get root is OK
+2026-01-23 14:38:09,952 [INFO] app.main: get root is OK
+2026-01-23 14:38:10,099 [INFO] app.main: get root is OK
+2026-01-23 14:38:10,255 [INFO] app.main: get root is OK
+2026-01-23 14:38:10,411 [INFO] app.main: get root is OK
+2026-01-23 14:40:46,130 [INFO] app.main: get root is OK
+2026-01-23 14:40:47,724 [INFO] app.main: get root is OK
+2026-01-23 14:40:47,945 [INFO] app.main: get root is OK
+2026-01-23 14:40:48,091 [INFO] app.main: get root is OK
+2026-01-23 14:40:48,272 [INFO] app.main: get root is OK
+2026-01-23 14:40:48,464 [INFO] app.main: get root is OK
+2026-01-23 14:40:48,628 [INFO] app.main: get root is OK
+2026-01-23 14:40:48,804 [INFO] app.main: get root is OK
+2026-01-23 14:40:48,972 [INFO] app.main: get root is OK
+2026-01-23 14:40:49,144 [INFO] app.main: get root is OK
+2026-01-23 14:40:49,317 [INFO] app.main: get root is OK
+2026-01-23 14:40:49,478 [INFO] app.main: get root is OK
+2026-01-23 14:40:49,648 [INFO] app.main: get root is OK
+2026-01-23 14:40:49,809 [INFO] app.main: get root is OK
+2026-01-23 14:40:49,974 [INFO] app.main: get root is OK
+2026-01-23 14:40:50,128 [INFO] app.main: get root is OK
+2026-01-23 14:40:50,310 [INFO] app.main: get root is OK
+2026-01-23 14:40:50,628 [INFO] app.main: get root is OK
+2026-01-23 14:40:50,793 [INFO] app.main: get root is OK
+2026-01-23 14:40:50,958 [INFO] app.main: get root is OK
+2026-01-23 14:40:51,119 [INFO] app.main: get root is OK
+2026-01-23 14:40:51,277 [INFO] app.main: get root is OK
+2026-01-23 14:40:51,426 [INFO] app.main: get root is OK
+2026-01-23 14:40:51,582 [INFO] app.main: get root is OK
+2026-01-23 14:40:51,741 [INFO] app.main: get root is OK
+2026-01-23 14:40:51,897 [INFO] app.main: get root is OK
+2026-01-23 14:40:52,341 [INFO] app.main: get root is OK
+2026-01-23 14:40:52,496 [INFO] app.main: get root is OK
+2026-01-23 14:40:52,646 [INFO] app.main: get root is OK
+2026-01-23 14:40:52,802 [INFO] app.main: get root is OK
+2026-01-23 14:40:52,948 [INFO] app.main: get root is OK
+2026-01-23 14:40:53,104 [INFO] app.main: get root is OK
+2026-01-23 14:40:53,246 [INFO] app.main: get root is OK
+2026-01-23 14:40:53,379 [INFO] app.main: get root is OK
+2026-01-23 14:40:53,541 [INFO] app.main: get root is OK
+2026-01-23 14:40:53,682 [INFO] app.main: get root is OK
+2026-01-23 14:40:53,832 [INFO] app.main: get root is OK
+2026-01-23 14:43:18,097 [INFO] uvicorn.error: Will watch for changes in these directories: ['C:\\Users\\Maksim\\Documents\\TWIN docs\\my_site\\ver5\\backend']
+2026-01-23 14:43:18,097 [INFO] uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-01-23 14:43:18,100 [INFO] uvicorn.error: Started reloader process [1916] using StatReload
+2026-01-23 14:43:19,005 [INFO] uvicorn.error: Started server process [13804]
+2026-01-23 14:43:19,006 [INFO] uvicorn.error: Waiting for application startup.
+2026-01-23 14:43:19,009 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2026-01-23 14:43:19,009 [INFO] sqlalchemy.engine.Engine: COMMIT
+2026-01-23 14:43:19,010 [INFO] uvicorn.error: Application startup complete.
+2026-01-23 14:43:26,215 [INFO] app.main: get root is OK
+2026-01-23 14:43:27,554 [INFO] app.main: get root is OK
+2026-01-23 14:43:27,708 [INFO] app.main: get root is OK
+2026-01-23 14:43:27,848 [INFO] app.main: get root is OK
+2026-01-23 14:43:27,998 [INFO] app.main: get root is OK
+2026-01-23 14:43:28,155 [INFO] app.main: get root is OK
+2026-01-23 14:43:28,292 [INFO] app.main: get root is OK
+2026-01-23 14:43:28,431 [INFO] app.main: get root is OK
+2026-01-23 14:43:28,692 [INFO] app.main: get root is OK
+2026-01-23 14:43:28,822 [INFO] app.main: get root is OK
+2026-01-23 14:43:28,954 [INFO] app.main: get root is OK
+2026-01-23 14:43:29,096 [INFO] app.main: get root is OK
+2026-01-23 14:43:29,356 [INFO] app.main: get root is OK
+2026-01-23 14:43:29,498 [INFO] app.main: get root is OK
+2026-01-23 14:43:29,646 [INFO] app.main: get root is OK
+2026-01-23 14:43:29,788 [INFO] app.main: get root is OK
+2026-01-23 14:43:29,992 [INFO] app.main: get root is OK
+2026-01-23 14:43:30,146 [INFO] app.main: get root is OK
+2026-01-23 14:43:30,340 [INFO] app.main: get root is OK
+2026-01-23 14:43:30,579 [INFO] app.main: get root is OK
+2026-01-23 14:43:30,762 [INFO] app.main: get root is OK
+2026-01-23 14:43:31,487 [INFO] app.main: get root is OK
+2026-01-23 14:43:32,064 [INFO] app.main: get root is OK
+2026-01-23 14:43:32,491 [INFO] app.main: get root is OK
+2026-01-23 14:43:32,776 [INFO] app.main: get root is OK
+2026-01-23 14:43:33,053 [INFO] app.main: get root is OK
+2026-01-23 14:43:33,348 [INFO] app.main: get root is OK
+2026-01-23 14:43:33,497 [INFO] app.main: get root is OK
+2026-01-23 14:43:33,663 [INFO] app.main: get root is OK
+2026-01-23 14:43:33,958 [INFO] app.main: get root is OK
+2026-01-23 14:43:34,098 [INFO] app.main: get root is OK
+2026-01-23 14:43:34,243 [INFO] app.main: get root is OK
+2026-01-23 14:43:34,380 [INFO] app.main: get root is OK
+2026-01-23 14:43:34,513 [INFO] app.main: get root is OK
+2026-01-23 14:43:34,654 [INFO] app.main: get root is OK
+2026-01-23 14:43:34,778 [INFO] app.main: get root is OK
+2026-01-23 14:44:42,912 [INFO] app.main: get root is OK
+2026-01-23 14:44:46,322 [INFO] app.main: get root is OK
+2026-01-23 14:46:59,183 [WARNING] uvicorn.error: StatReload detected changes in 'app\core\config.py'. Reloading...
+2026-01-23 14:46:59,242 [INFO] uvicorn.error: Shutting down
+2026-01-23 14:46:59,352 [INFO] uvicorn.error: Waiting for application shutdown.
+2026-01-23 14:46:59,357 [INFO] uvicorn.error: Application shutdown complete.
+2026-01-23 14:46:59,358 [INFO] uvicorn.error: Finished server process [13804]
+2026-01-23 14:47:00,522 [INFO] uvicorn.error: Started server process [11784]
+2026-01-23 14:47:00,522 [INFO] uvicorn.error: Waiting for application startup.
+2026-01-23 14:47:00,526 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2026-01-23 14:47:00,527 [INFO] sqlalchemy.engine.Engine: COMMIT
+2026-01-23 14:47:00,528 [INFO] uvicorn.error: Application startup complete.
+2026-01-23 14:47:33,894 [WARNING] uvicorn.error: StatReload detected changes in 'app\main.py'. Reloading...
+2026-01-23 14:47:33,955 [INFO] uvicorn.error: Shutting down
+2026-01-23 14:47:34,064 [INFO] uvicorn.error: Waiting for application shutdown.
+2026-01-23 14:47:34,069 [INFO] uvicorn.error: Application shutdown complete.
+2026-01-23 14:47:34,071 [INFO] uvicorn.error: Finished server process [11784]
+2026-01-23 14:47:37,957 [WARNING] uvicorn.error: StatReload detected changes in 'run.py'. Reloading...
+2026-01-23 14:47:44,151 [INFO] uvicorn.error: Stopping reloader process [1916]
+Will watch for changes in these directories: ['C:\\Users\\Maksim\\Documents\\TWIN docs\\my_site\\ver5\\backend']
+Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Started reloader process [11048] using StatReload
+Started server process [13892]
+Waiting for application startup.
+BEGIN (implicit)
+COMMIT
+Application startup complete.
+2026-01-23 14:48:05,295 [INFO] app.main: get root is OK
+2026-01-23 14:48:09,940 [INFO] app.main: get root is OK
+2026-01-23 14:48:10,083 [INFO] app.main: get root is OK
+2026-01-23 14:48:10,298 [INFO] app.main: get root is OK
+2026-01-23 14:48:10,480 [INFO] app.main: get root is OK
+2026-01-23 14:48:10,654 [INFO] app.main: get root is OK
+2026-01-23 14:48:10,833 [INFO] app.main: get root is OK
+2026-01-23 14:48:11,010 [INFO] app.main: get root is OK
+2026-01-23 14:48:11,173 [INFO] app.main: get root is OK
+2026-01-23 14:48:11,439 [INFO] app.main: get root is OK
+2026-01-23 14:48:11,580 [INFO] app.main: get root is OK
+2026-01-23 14:48:11,724 [INFO] app.main: get root is OK
+2026-01-23 14:48:11,893 [INFO] app.main: get root is OK
+2026-01-23 14:48:12,032 [INFO] app.main: get root is OK
+2026-01-23 14:48:12,166 [INFO] app.main: get root is OK
+2026-01-23 14:48:12,299 [INFO] app.main: get root is OK
+2026-01-23 14:48:12,446 [INFO] app.main: get root is OK
+2026-01-23 14:48:12,712 [INFO] app.main: get root is OK
+2026-01-23 14:48:12,856 [INFO] app.main: get root is OK
+2026-01-23 14:48:12,994 [INFO] app.main: get root is OK
+2026-01-23 14:48:13,145 [INFO] app.main: get root is OK
+2026-01-23 14:48:13,431 [INFO] app.main: get root is OK
+2026-01-23 14:50:13,793 [INFO] app.main: get root is OK
+2026-01-23 14:50:20,113 [INFO] app.main: api/healthcheck is OK
+Shutting down
+Waiting for application shutdown.
+Application shutdown complete.
+Finished server process [13892]
+Stopping reloader process [11048]
+2026-01-23 14:51:28,077 [INFO] app.main: get root is OK
+2026-01-23 14:51:39,205 [INFO] app.main: get root is OK
+2026-01-23 14:51:43,162 [INFO] app.main: api/healthcheck is OK
+2026-01-23 18:41:48,678 [INFO] app.main: get root is OK
+2026-01-23 18:56:35,185 [INFO] app.main: get root is OK
+2026-01-23 22:33:30,704 [INFO] app.main: get root is OK
+2026-01-23 22:34:01,640 [INFO] app.main: api/healthcheck is OK
+2026-01-26 17:48:15,619 [INFO] app.middleware: Payload: username=admin&password=123
+2026-01-26 17:53:31,421 [INFO] app.middleware: Payload: username=admin&password=123
+2026-01-26 17:54:56,804 [INFO] app.middleware: Payload: username=admin&password=123
+2026-01-26 17:56:25,084 [INFO] app.middleware: Payload: username=admin&password="*******"

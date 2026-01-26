@@ -1,0 +1,262 @@
+/* Общие стили для секции */
+.section_reviews {
+    /* padding: 40px 20px; */
+    /* font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #BFBFBF; */
+}
+
+.reviews_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.reviews_header a {
+    width: 295px;
+    text-align: center;
+    text-decoration: none;
+}
+    
+.add-bottom {
+    display: block;
+    width: 295px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.add-review-btn:active {
+    background-color: #EA00FF;
+}
+
+/* Контейнер для карточек с прокруткой */
+.reviews-container {
+    gap: 20px; /* Расстояние между карточками */
+     /* Горизонтальная прокрутка */
+    padding: 0 10px 20px 10px; /* Отступ снизу для полосы прокрутки */
+    /* scrollbar-width: thin; */
+    scrollbar-color: #6a0dad #1a1a2e; /* Цвет бегунка и дорожки для Firefox */
+}
+
+.reviews_cards {
+    margin-bottom: 55px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #BFBFBF;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #9640C1 #190621;
+}
+
+.reviews_cards::-webkit-scrollbar-thumb {
+    width: 1px;
+}
+
+.reviews_cards::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.reviews_cards::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Стиль отдельной карточки отзыва */
+.review-card {
+    /* flex: 0 0 auto; */
+    /* width: 413px; */
+    margin-right: 30px;
+    padding: 0;
+    transition: transform 0.3s ease;
+    white-space: normal;
+}
+
+.review-card-wrapper {
+    max-height: 220px;
+    margin-bottom: 17px;
+    position: relative;
+    background-color: #190621;
+    border: 1px solid #6a0dad;
+    border-radius: 45px;
+}
+
+.review-card-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -19px;
+    left: 40px;
+    width: 0;
+    height: 0;
+
+    border: 18px solid transparent; 
+    border-top-color: #310850;
+    box-sizing: border-box;
+    border-bottom: 0;
+}
+
+.review-card-wrapper p {
+    width: 194px;
+    margin: 0;
+    padding-top: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.review-meta {
+    margin-bottom: 38px;
+    padding-top: 19px;
+    padding-left: 34px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #BFBFBF;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-location {
+    color: #a0a0a0;
+}
+
+hr {
+  border: none; /* Убираем стандартную границу */
+  height: 2px; /* Задаем толщину */
+  background-color: #333; /* Задаем цвет */
+  margin: 20px 0; /* Добавляем отступы сверху и снизу */
+}
+.add-top {
+    visibility: hidden;
+}
+.close {
+    display: none !important;
+}
+
+/* modal window */
+/* Стилизация оверлея (затемненный фон) */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Поверх всего контента */
+    z-index: 100; /* Убедитесь, что оно выше других элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Темный полупрозрачный фон */
+    justify-content: center; /* Центрирование формы */
+    align-items: center; /* Центрирование формы */
+}
+
+/* Стилизация самой формы (контент внутри оверлея) */
+.modal-content {
+    background-color: #070710;
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 80%; /* Ширина на мобильных */
+    max-width: 400px; /* Максимальная ширина на десктопе */
+    border-radius: 8px;
+    position: relative;
+    color: white;
+}
+
+/* Кнопка закрытия */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Добавьте стили для input, textarea и button, чтобы они выглядели как на макете */
+.modal-content input, 
+.modal-content textarea, 
+.modal-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #9640C1;
+    background-color: #190621; /* Цвет полей ввода */
+    color: white;
+    border-radius: 10px;
+}
+
+.modal-content button {
+    background-color: #000398;
+    cursor: pointer;
+    border: none;
+}
+.modal-content button:active {
+    background-color: #EA00FF;
+}
+.success-content p {
+    margin: 10px 0;
+    max-width: 250px;
+}
+.success-content-title {
+    max-width: 250px;
+    font-size: 28px;
+    color: #BFBFBF;
+    line-height: 1.2;
+}
+.no-scroll {
+    overflow: hidden;
+    /* padding-right: 15px; */
+}
+
+@media (min-width: 768px) {
+    .add-top {
+        visibility: visible;
+    }
+    .add-bottom {
+        visibility: hidden;
+    }
+    .reviews_cards {
+        margin-bottom: 0;
+    }
+    .review-card-wrapper {
+        max-height: 250px;
+    }
+    .review-card-wrapper p {
+        margin-bottom: 30px;
+        width: 300px;
+    }
+    .modal-content {
+        max-width: 600px;
+    }
+    .success-content-title {
+        max-width: none;
+    }
+    .success-content p {
+        max-width: none;
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) {
+    .review-card-wrapper p {
+        margin-bottom: 20px;
+        width: 344px;
+    }
+    .success-content-title {
+        font-size: 32px;
+    }
+    .success-content p {
+        max-width: none;
+        font-size: 18px;
+    }
+}

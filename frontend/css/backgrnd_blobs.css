@@ -1,0 +1,272 @@
+:root {
+    --blob_1_2_3_4_size390: 100px;
+    --blob_5_size390: 300px;
+    --blob_6_size: 200px;
+
+    --blob_5_size768: 500px;
+    --blob_7_8_size768: 400px;
+
+    --blob_1_2_3_4_size1440: 300px;
+    --blob_5_size1440: 700px;
+    --blob_6_size1440: 300px;
+}
+
+/* Базовые стили для всех размытых элементов */
+.background-blob {
+    position: absolute;
+    /* Задаем размер и форму (например, круг) */
+    width: 400px; 
+    height: 400px;
+    border-radius: 50%; 
+    /* Отправляем их на задний план */
+    z-index: -1; 
+    /* Применяем сильное размытие */
+    filter: blur(67px);
+    /* filter: blur(0px); */
+    /* Добавляем немного анимации, чтобы они не были статичными */
+    animation: pulse 5s infinite alternate;
+}
+
+/* Индивидуальное позиционирование и цвет */
+.blob-1 {
+    background-color: #431A58;
+    top: 6%;
+    left: 33%;
+    width: var(--blob_1_2_3_4_size390);
+    height: var(--blob_1_2_3_4_size390);
+}
+
+.blob-2 {
+    background-color: #431A58;
+    top: 10%;
+    left: 8%;
+    width: var(--blob_1_2_3_4_size390);
+    height: var(--blob_1_2_3_4_size390);
+}
+
+.blob-3 {
+    background-color: #431A58;
+    top: 10%;
+    left: 59%;
+    width: var(--blob_1_2_3_4_size390);
+    height: var(--blob_1_2_3_4_size390);
+}
+.blob-4 {
+    background-color: #431A58;
+    top: 16%;
+    left: 32%;
+    width: var(--blob_1_2_3_4_size390);
+    height: var(--blob_1_2_3_4_size390);
+}
+.blob-5 {
+    background-color: #431A58;
+    top: 65%;
+    left: 7%;
+    width: var(--blob_5_size390);
+    height: var(--blob_5_size390);
+}
+.blob-6 {
+    background-color: #431A58;
+    top: 122%;
+    left: 4%;
+    width: var(--blob_6_size);
+    height: var(--blob_6_size);
+}
+.blob-7 {
+    background-color: #431A58;
+    top: 216%;
+    left: 3%;
+    width: 300px;
+    height: 300px;
+}
+.blob-8 {
+    background-color: #431A58;
+    top: 306%;
+    left: 3%;
+    width: 300px;
+    height: 300px;
+}
+.blob-9 {
+    background-color: #431A58;
+    top: 414%;
+    left: 7%;
+    width: 300px;
+    height: 300px;
+}
+.blob-10 {
+    background-color: #431A58;
+    top: 482%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+}
+.blob-11 {
+    visibility: hidden;
+    background-color: #431A58;
+}
+@media (min-width: 768px) {
+    .background-blob {
+        filter: blur(145px);
+    }
+    .blob-1 {
+        top: 8%;
+        left: 24%;
+        width: var(--blob_1_2_3_4_size390);
+        height: var(--blob_1_2_3_4_size390);
+    }
+
+    .blob-2 {
+        top: 13%;
+        left: 11%;
+        width: var(--blob_1_2_3_4_size390);
+        height: var(--blob_1_2_3_4_size390);
+    }
+
+    .blob-3 {
+        top: 13%;
+        left: 36%;
+        width: var(--blob_1_2_3_4_size390);
+        height: var(--blob_1_2_3_4_size390);
+    }
+    .blob-4 {
+        top: 17%;
+        left: 24%;
+        width: var(--blob_1_2_3_4_size390);
+        height: var(--blob_1_2_3_4_size390);
+    }
+    .blob-5 {
+        top: 35%;
+        left: 15%;
+        width: var(--blob_5_size768);
+        height: var(--blob_5_size768);
+    }
+    .blob-6 {
+        top: 78%;
+        left: 27%;
+    }
+    .blob-7 {
+        top: 139%;
+        left: 3%;
+        width: var(--blob_7_8_size768);
+        height: var(--blob_7_8_size768);
+    }
+    .blob-8 {
+        top: 227%;
+        left: 3%;
+        width: var(--blob_7_8_size768);
+        height: var(--blob_7_8_size768);
+    }
+    .blob-9 {
+        top: 280%;
+        left: 32%;
+    }
+    .blob-10 {
+        top: 352%;
+        left: -5%;
+    }
+}
+@media (min-width: 1440px) {
+    .background-blob {
+        filter: blur(280px);
+    }
+    .blob-1 {
+        top: 6%;
+        left: 17%;
+        width: var(--blob_1_2_3_4_size1440);
+        height: var(--blob_1_2_3_4_size1440);
+    }
+
+    .blob-2 {
+        top: 15%;
+        left: 2%;
+        width: var(--blob_1_2_3_4_size1440);
+        height: var(--blob_1_2_3_4_size1440);
+    }
+
+    .blob-3 {
+        top: 15%;
+        left: 29%;
+        width: var(--blob_1_2_3_4_size1440);
+        height: var(--blob_1_2_3_4_size1440);
+    }
+    .blob-4 {
+        top: 25%;
+        left: 16%;
+        width: var(--blob_1_2_3_4_size1440);
+        height: var(--blob_1_2_3_4_size1440);
+    }
+    .blob-5 {
+        top: 54%;
+        left: 12%;
+        width: var(--blob_5_size1440);
+        height: var(--blob_5_size1440);
+    }
+    .blob-6 {
+        top: 114%;
+        left: 10%;
+        width: var(--blob_6_size1440);
+        height: var(--blob_6_size1440);
+    }
+    .blob-7 {
+        top: 164%;
+        left: 10%;
+        width: var(--blob_7_8_size768);
+        height: var(--blob_7_8_size768);
+    }
+    .blob-8 {
+        top: 167%;
+        left: 57%;
+        width: var(--blob_7_8_size768);
+        height: var(--blob_7_8_size768);
+    }
+    .blob-11 {
+        visibility: visible;
+        top: 204%;
+        left: 42%;
+        width: var(--blob_7_8_size768);
+        height: var(--blob_7_8_size768);
+    }
+    .blob-9 {
+        top: 244%;
+        left: 43%;
+        width: 300px;
+        height: 300px;
+    }
+    .blob-10 {
+        /* visibility: hidden; */
+        top: 316%;
+        left: 2%;
+    }
+}
+@media (min-width: 1920px) {
+    .background-blob {
+        filter: blur(780px);
+    }
+    .blob-5 {
+        top: 46%;
+        left: 12%;
+    }
+    .blob-6 {
+        top: 96%;
+        left: 5%;
+    }
+    .blob-11 {
+        visibility: hidden;
+    }
+    .blob-7 {
+        top: 142%;
+        left: 5%;
+    }
+    .blob-8 {
+        top: 142%;
+        left: 66%;
+    }
+    .blob-9 {
+        top: 188%;
+        left: 43%;
+    }
+    .blob-10 {
+        top: 258%;
+        left: 6%;
+    }
+}

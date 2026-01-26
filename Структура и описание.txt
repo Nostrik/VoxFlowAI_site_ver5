@@ -1,0 +1,100 @@
+my_project/
+├── backend/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py              # Инициализация FastAPI, CORS, Lifespan (запуск бота)
+│   │   ├── database.py          # Engine, SessionLocal, Base для SQLAlchemy
+│   │   ├── models.py            # Описание таблиц БД (User, Message, и т.д.)
+│   │   ├── schemas.py           # Pydantic модели (UserCreate, ItemRead)
+│   │   ├── crud.py              # Функции: get_user, create_item (используют и API, и Бот)
+│   │   ├── core/
+│   │   │   ├── __init__.py
+│   │   │   └── config.py        # Настройки Pydantic-settings (читает .env)
+│   │   ├── bot/
+│   │   │   ├── __init__.py
+│   │   │   ├── main.py          # Точка запуска бота (Polling или Webhook)
+│   │   │   ├── handlers.py      # Обработчики команд /start, /help
+│   │   │   └── keybords.py      # Кнопки интерфейса бота
+│   │   ├── routers/
+│   │   │   ├── __init__.py
+│   │   │   ├── users.py         # Эндпоинты для пользователей
+│   │   │   └── notify.py        # Эндпоинты для инициации рассылок
+│   │   └── services/
+│   │       ├── __init__.py
+│   │       └── telegram_auth.py # Логика привязки Telegram к аккаунту сайта
+│   ├── Dockerfile               # Инструкции сборки Python-образа
+│   ├── pyproject.toml           # Зависимости Poetry (fastapi, sqlalchemy, aiogram)
+│   └── poetry.lock
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── App.js
+│   │   └── main.js
+│   ├── Dockerfile               # Multi-stage сборка (Node.js -> Nginx/static)
+│   ├── package.json
+│   └── package-lock.json
+├── nginx/
+│   ├── conf.d/
+│   │   └── default.conf         # Конфигурация проксирования (80/443 порты)
+│   └── Dockerfile               # Кастомный образ Nginx (если нужны свои модули)
+├── certbot/
+│   ├── conf/                    # Сюда записываются живые сертификаты
+│   └── www/                     # Папка для проверки Let's Encrypt
+├── data/
+│   └── database.db              # Файл SQLite (хранится на хосте)
+├── .env                         # Токен бота, секреты, домен (не в репозитории!)
+├── .gitignore
+├── docker-compose.yml           # Сборка всех сервисов (api, bot, frontend, nginx, certbot)
+└── README.md
+
+
+
+1. Директория backend/app/ (Сердце системы)
+
+    main.py
+    Точка входа API. Здесь инициализируется экземпляр FastAPI, подключаются роутеры (app.include_router) и настраивается CORS (чтобы фронтенд мог достучаться до бэкенда). Также здесь обычно настраивается lifespan — функция, которая запускает и останавливает фоновые задачи (например, соединение с БД).
+    database.py
+    Настройка SQLAlchemy. Здесь создается engine (для SQLite указывается путь к файлу), настраивается SessionLocal (фабрика сессий для запросов) и объявляется Base класс, от которого наследуются все модели.
+    models.py
+    Описание таблиц БД. Например, класс User, где описаны колонки id, telegram_id, username. Именно по этим описаниям SQLAlchemy создает таблицы в database.db.
+    schemas.py
+    Модели Pydantic. Они отвечают за валидацию данных. Например, что при регистрации пользователя пароль — это строка, а email — корректный адрес. Это «лицо» вашего API в документации Swagger.
+    crud.py
+    (Create, Read, Update, Delete). Изолированные функции для работы с данными. Например, get_user_by_id(db, user_id). Эти функции вызываются и из API-роутеров, и из Телеграм-бота.
+    core/config.py
+    Управление настройками через pydantic-settings. Читает файл .env и превращает переменные (токен бота, путь к БД) в типизированные объекты Python.
+
+Директория backend/app/bot/ (Telegram интерфейс)
+
+    main.py (или loader.py)
+    Инициализация объекта Bot и Dispatcher (если используете aiogram). Здесь же запускается цикл polling.
+    handlers.py
+    Логика ответов. Обработка команды /start, сохранение chat_id пользователя в базу данных (через функции из crud.py).
+    keyboards.py
+    Определение кнопок (Reply/Inline), чтобы интерфейс бота был удобным.
+
+Директория backend/app/routers/
+
+    Разделение API по зонам ответственности. В users.py — всё про профили, в notify.py — эндпоинт, который при получении запроса от фронтенда велит боту отправить уведомление.
+
+2. Конфигурация Docker и Зависимостей
+
+    backend/Dockerfile
+    Инструкция, как собрать образ: установить Python, установить Poetry, скопировать код и запустить сервер. Один и тот же образ используется для сервиса api и bot.
+    backend/pyproject.toml
+    Главный файл Poetry. В нем перечислены все библиотеки: fastapi, uvicorn, sqlalchemy, aiogram, python-dotenv. Он заменяет старый requirements.txt.
+
+3. Инфраструктура (Корневая папка)
+
+    docker-compose.yml
+    "Дирижер" проекта. Он говорит: "Запусти контейнер с API на порту 8000, запусти контейнер с ботом, запусти Nginx на порту 80/443 и примонтируй папку с базой данных".
+    nginx/conf.d/default.conf
+    Конфиг веб-сервера. Он решает: если пришел запрос на /api, отправить его в контейнер бэкенда. Если на /, отдать файлы фронтенда. Здесь же прописываются пути к SSL-сертификатам.
+    certbot/
+    Служебная папка. В ней хранятся ключи и сертификаты Let's Encrypt, которые Certbot получает от их серверов и "подсовывает" Nginx.
+    data/
+    Критически важная папка. В ней лежит файл database.db. Поскольку папка "проброшена" (volume) из хост-системы в контейнер, данные не удалятся, даже если вы пересоберете все образы.
+    .env
+    Файл с секретами. Здесь хранятся BOT_TOKEN, SECRET_KEY для JWT и настройки домена.

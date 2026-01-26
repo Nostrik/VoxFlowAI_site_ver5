@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxFlowAI — Голосовые интерфейсы нового поколения</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/png">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <link rel="stylesheet" href="./css/voice_players.css">
+  <link rel="stylesheet" href="./css/reviews.css">
+  <link rel="stylesheet" href="./css/success_form_window.css">
+  <link rel="stylesheet" href="./css/backgrnd_blobs.css">
+</head>
+<body>
+    <div class="background-blob blob-1 hide-section"></div><!-- hero390 -->
+    <div class="background-blob blob-2 hide-section"></div><!-- hero390 -->
+    <div class="background-blob blob-3 hide-section"></div><!-- hero390 -->
+    <div class="background-blob blob-4 hide-section"></div><!-- hero390 -->
+    <div class="background-blob blob-5 hide-section"></div><!-- features390 -->
+    <div class="background-blob blob-6 hide-section"></div><!-- form1390 -->
+    <div class="background-blob blob-7 hide-section"></div><!-- workflow390 -->
+    <div class="background-blob blob-8 hide-section"></div><!-- workflow390 -->
+    <div class="background-blob blob-9 hide-section"></div><!-- about-us390 -->
+    <div class="background-blob blob-10 hide-section"></div><!-- form2390 -->
+
+    <div class="background-blob blob-11 hide-section"></div><!-- workflow390 -->
+    <section class="header" id="header">
+        <div class="container">
+            <div class="logo">VoxFlowAI</div>
+            <div class="nav_burger_tel_social">
+            <nav class="header_nav">
+                <a href="#features">Почему мы</a>
+                <!-- <a href="#pricing">Тарифы</a> -->
+                <a href="#workflow">Этапы работы</a>
+                <a href="#about_us">О нас</a>
+                <a href="#cases">Примеры работ</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <a class="header-tel" href="tel:+79211769883">+7 (921) 176-98-83</a>
+        <div class="header-social">
+            <a href="t.me" target="_blank" aria-label="Telegram">
+              <svg width="26" height="26" viewBox="0 0 240 240" fill="none" xmlns="www.w3.org">
+          <circle cx="120" cy="120" r="120" fill="#2AABEE"/>
+          <path d="M180.6 67.2L157.7 176.4c-1.7 7.6-6.2 9.5-12.5 5.9l-34.6-25.5-16.7 16.1c-1.9 1.9-3.4 3.4-6.9 3.4l2.5-35 63.7-57.5c2.8-2.5-0.6-3.9-4.3-1.4l-78.7 49.5-33.9-10.6c-7.4-2.3-7.6-7.4 1.6-11L170 61.1c6.1-2.3 11.4 1.4 10.6 6.1z" fill="#fff"/>
+        </svg>
+            </a>
+            <a href="t.me" target="_blank" aria-label="Telegram">
+              <svg width="26" height="26" viewBox="0 0 240 240" fill="none" xmlns="www.w3.org">
+          <circle cx="120" cy="120" r="120" fill="#2AABEE"/>
+          <path d="M180.6 67.2L157.7 176.4c-1.7 7.6-6.2 9.5-12.5 5.9l-34.6-25.5-16.7 16.1c-1.9 1.9-3.4 3.4-6.9 3.4l2.5-35 63.7-57.5c2.8-2.5-0.6-3.9-4.3-1.4l-78.7 49.5-33.9-10.6c-7.4-2.3-7.6-7.4 1.6-11L170 61.1c6.1-2.3 11.4 1.4 10.6 6.1z" fill="#fff"/>
+        </svg>
+            </a>
+            <a href="wa.me" target="_blank" aria-label="WhatsApp">
+        <svg width="26" height="26" viewBox="0 0 256 256" xmlns="www.w3.org">
+          <defs>
+            <clipPath id="clip">
+              <circle cx="128" cy="128" r="128"/>
+            </clipPath>
+          </defs>
+          <circle cx="128" cy="128" r="128" fill="#25D366"/>
+          <g clip-path="url(#clip)">
+            <path fill="#fff" d="M187.3 68.7C172.6 54 152 46 128.8 46c-46 0-83.2 37.2-83.2 83.1 0 14.6 3.8 28.9 11 41.5L46 210l41-10.7c12 6.6 25.6 10.1 39.8 10.1 46 0 83.2-37.2 83.2-83.1 0-23.2-8-43.8-22.7-58.6Zm-58.5 121c-12.4 0-24.6-3.4-35.1-9.8l-2.5-1.5-24.3 6.4 6.5-23.7-1.6-2.5c-6.7-10.5-10.2-22.5-10.2-34.9 0-36.3 29.6-65.9 65.9-65.9 17.6 0 34.1 6.8 46.5 19.2 12.4 12.5 19.2 29 19.1 46.5 0 36.3-29.6 65.9-65.9 65.9Zm39.1-48.9c-2.1-1-12.6-6.2-14.6-6.9-2-.8-3.5-1.2-5 1.2-1.5 2.3-5.8 6.9-7.1 8.3-1.3 1.5-2.6 1.7-4.7.8-12.8-5.4-21.2-9.6-29.7-21.7-2.2-3.1 2.2-2.9 6.2-11.4.7-1.5.4-2.7-.2-3.9-.6-1.2-5-12.1-6.9-16.6-1.8-4.3-3.7-3.7-5-3.8-1.3-.1-2.8-.1-4.3-.1-1.5 0-4 1-6 3-2 2-7.9 7.7-7.9 18.7s8.1 21.7 9.2 23.2c1.1 1.5 16 24.5 38.8 33.2 22.8 8.7 22.8 5.8 26.9 5.5 4.1-.3 13.2-5.3 15.1-10.4 1.9-5.1 1.9-9.5 1.3-10.4-.5-.9-1.8-1.5-3.9-2.5Z"/>
+          </g>
+        </svg>
+           </a>
+        </div>
+        </div>
+        <button class="burger-icon" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </button>
+        </div>
+        </div>
+    </section>
+
+    <!-- Секция 1: Главный экран (Hero Section) -->
+    <section class="section_hero" id="hero">
+      <div class="container">
+        <div class="hero_content hide-section">
+          <div class="hero_content_wrapper">
+            <h1 class="section-title">голосовые интерфейсы нового поколения</h1>
+             <!-- <h1 class="section-title">максимизируйте прибыль и автоматизируйте бизнес с помощью AI-ассистентов.</h1> -->
+            <p class="section-subtitle">
+              Превратите общение с клиентами в круглосуточную машину продаж. Интеллектуальные чат-боты и голосовые помощники берут на себя рутину, чтобы ваш бизнес рос.
+            </p>
+            <a href="#contact" class="btn-link">
+              <button class="button hero-btn">Запросить демо</button>
+            </a>
+          </div>
+           <picture>
+            <source media="(min-width: 1919px)" srcset="img/hero_1920.png">
+            <source media="(min-width: 1440px)" srcset="img/hero_1440.png">
+            <source media="(min-width: 767px)" srcset="img/hero_768.png">
+            <img src="img/hero_390.png" class="hero-img" fetchpriority="high">
+           </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция 2: Почему мы -->
+    <section class="section_features" id="features">
+      <div class="container">
+        <div class="features_content hide-section">
+           <picture>
+            <source media="(min-width: 1919px)" srcset="img/features_1920.png">
+            <source media="(min-width: 1439px)" srcset="img/features_1440.png">
+            <source media="(min-width: 767px)" srcset="img/features_768.png">
+            <img src="img/features_390.png" class="features-img" fetchpriority="high">
+           </picture>
+          <div class="features_content_right">
+            <h1 class="section-title features-title">почему мы?</h1>
+            <p class="section-subtitle features-subtitle">
+              Сделайте общение с вашими клиентами качественней и дешевле.
+            </p>
+            <ul class="features_list">
+              <li>Cократим расходы на персонал до 50% без потери качества обслуживания.</li>
+              <li>Повысим лояльность клиентов, обеспечивая мгновенные ответы 24/7.</li>
+              <li>Мы собираем лиды даже когда ваши менеджеры отдыхают.</li>
+              <li>Интеграция с CRM и другими бизнес-ПО.</li>
+              <li>NLU - технологии для естественной коммуникации и понимая контекста.</li>
+              <li>Сквозная история диалогов, аналитика и отчеты</li>
+              <li>Единый интерфейс и личный кабинет</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция 4: Контакты(форма обратной связи) -->
+    <section class="section_contact" id="contact">
+      <div class="container">
+        <div class="contact_content hide-section">
+          <div class="cont_content_left">
+            <h1 class="section-title form-title">получить консультацию</h1>
+            <form class="contact_form" role="form" aria-label="форма обратной связи">
+              <label for="email">Email</label>
+              <input type="email" name="email" placeholder="Email" required>
+              <label for="company">Компания</label>
+              <input type="text" name="company" placeholder="Компания" required>
+              <label for="phone">Телефон</label>
+              <input type="tel" name="phone" placeholder="Телефон" required>
+              <label for="description">Краткое описание задачи</label>
+              <textarea name="description" placeholder="Краткое описание задачи" required></textarea>
+              <div class="form-buttons">
+                <button type="submit" class="button primary-btn">Отправить</button>
+                <button type="button" class="button secondary-btn" onclick="window.open('https://t.me/maksimfalev','_blank')">Связаться в TG</button>
+                <button type="button" class="button test-btn" onclick="fillTestData(this)">Тест</button>
+              </div>
+            </form>
+          </div>
+          <div class="cont_content_right">
+            <!-- <img class="contact-img" alt="contact-img"> -->
+             <picture>
+              <source media="(min-width: 1919px)" srcset="img/contact_1920.png">
+              <source media="(min-width: 1439px)" srcset="img/contact_1440.png">
+              <source media="(min-width: 767px)" srcset="img/contact_768.png">
+            <img src="img/contact_390.png" class="contact-img" fetchpriority="high">
+             </picture>
+            <div class="contact_content_right_title_email_tel">
+              <h4 class="cont_content_rigth_title">Или свяжитесь с нами напрямую:</h4>
+              <a href="mailto:sales@voxFlow.example">info@voxflowai.ru</a><br/>
+              <a href="tel:+79211769883">+7 (921) 176-98-83</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция 5: Этапы работы -->
+    <section class="section_workflow" id="workflow">
+      <div class="container">
+        <h1 class="section-title hide-section workflow-title">этапы работы</h1>
+        <div class="workflow_content hide-section">
+          <!-- Этап 1 -->
+            <div class="workflow-step">
+              <div class="workflow-step-wrapper">
+                <div class="step-number">01</div>
+                <h2>Заключение договора</h2>
+              </div>
+              <p>Договор отправляется в ЭДО. При необходимости в видео звонке разбираются или корректируются непонятные для вас пункты</p>
+            </div>
+          <span class="arrow"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
+</svg>
+</span>
+          <!-- Этап 2 -->
+            <div class="workflow-step">
+              <div class="workflow-step-wrapper">
+                <div class="step-number">02</div>
+                <h2>Согласование скриптов и регламентов</h2>
+                </div>
+              <p>Создается проектная группа, согласовываются скрипты и техническое задание на интеграцию</p>
+            </div>
+          <span class="arrow"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
+</svg>
+</span>
+          <!-- Этап 3 -->
+            <div class="workflow-step">
+              <div class="workflow-step-wrapper">
+                <div class="step-number">03</div>
+                <h2>Разработка "Виртуального помощника"</h2>
+                </div> 
+              <p>Создание голосового помощника или чат-бота. Интеграция в СРМ систему</p>
+            </div>
+          <span class="arrow"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
+</svg>
+</span>
+          <!-- Этап 4 -->
+            <div class="workflow-step">
+              <div class="workflow-step-wrapper">
+                <div class="step-number">04</div>
+                <h2>Тестирование системы</h2>
+              </div>
+              <p>Перед запуском система проходит тестирование силами исполнителя и заказчика. Вносятся корректировки при необходимости</p>
+            </div>
+          <span class="arrow-second"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
+</svg>
+</span>
+<span class="arrow"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
+</svg>
+</span>
+          <!-- Этап 5 -->
+            <div class="workflow-step workflow-step-five">
+              <div class="workflow-step-wrapper">
+                <div class="step-number">05</div>
+                <h2>Сдача проекта</h2>
+              </div>
+              <p>Подписание акта выполненных работ и запуск системы</p>
+            </div>
+          <span class="arrow"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
+</svg>
+</span>
+          <!-- Этап 6 -->
+            <div class="workflow-step">
+              <div class="workflow-step-wrapper">
+                <div class="step-number">06</div>
+                <h2>Гарантийное сопровождение</h2>
+              </div>
+              <p>В течение одного месяца мы обслуживаем систему, контролируем работоспособность, предоставляем отчеты</p>
+            </div>
+          <span class="arrow"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.929688 1.77075L20.9297 12.2708L0.929688 22.7708" stroke="#9640C1" stroke-width="4"/>
+</svg>
+</span>
+          <!-- Этап 7 -->
+            <div class="workflow-step">
+              <div class="workflow-step-wrapper">
+                <div class="step-number">07</div>
+                <h2>Завершение проекта</h2>
+              </div>
+              <p>Предоставляется пользователькая инстьрукция. Проводится обучение ответственному сотруднику</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция 6: О нас -->
+    <section class="section_about_us" id="about_us">
+      <div class="container">
+        <div class="about_us_content hide-section">
+            <!-- <img class="about-us-img" alt="about_us"> -->
+          <picture>
+            <source media="(min-width: 1919px)" srcset="img/about_us_1920.png">
+            <source media="(min-width: 1439px)" srcset="img/about_us_1440.png">
+            <source media="(min-width: 767px)" srcset="img/about_us_768.png">
+            <img src="img/about_us_390.png" class="about-us-img" fetchpriority="high">
+          </picture>
+          <div class="about_us_right">
+            <h1 class="section-title features-title">о нас</h1>
+            <div class="card-description">
+              <p>Мы - компания VoxFlowAI - автоматизируем взаимодействие и помогаем бизнесу улучшать связь с клиентами через автоматизированные решения, работающие 24/7. Голосовые и чат-боты, виджеты для сайта - всё это объединено в одном месте, чтобы вы могли сосредоточиться на развитии бизнеса</p>
+            </div>
+            <div class="partner-section">
+              <span class="partner-text">Официальный партнёр Twin</span>
+              <div class="partner-logo">
+                <img src="./img/partner_logo.png" alt="partner-logo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция 7: Примеры работ -->
+    <section class="section_cases" id="cases">
+      <div class="container">
+        <div class="cases_content hide-section">
+          <h1 class="section-title features-title">всё, что нужно вашему бизнесу</h1>
+              <!-- Секция "Голосовые помощники" -->
+          <div class="category-section">
+              <h3>голосовые помощники</h3>
+                <div class="services-list-wrapper">
+                <div class="services-list-scrollable" id="scrollable-list">
+
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Car_dealership_lead_gen.mp3" data-index="0">
+                    <p class="service-name">Автосалоны</p>
+                      <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                      
+                  </div>
+              
+              
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Dentistry_making_appointment.mp3" data-index="1">
+                    <p class="service-name">Стоматология</p>
+                     <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+
+                  </div>
+              
+              
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Food_delivery_order_confirmation.mp3" data-index="2">
+                    <p class="service-name">Доставка еды</p>
+                     <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              
+              
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/HR_recruitment_for_mass_vacancies.mp3" data-index="3">
+                    <p class="service-name">HR-агенства</p>
+                        <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              
+              
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Insurance_motor_OSAGO.mp3" data-index="4">
+                    <p class="service-name">Страхование</p>
+                        <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              
+              
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Leadgen_barbershop.mp3" data-index="5">
+                    <p class="service-name">Барбершоп</p>
+                    <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/NPS_barbershop.mp3" data-index="6">
+                    <p class="service-name">Барбершоп - NPS</p>
+                    <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/NPS_survey_for_the_store.mp3" data-index="7">
+                    <p class="service-name">Онлайн супермаркет - NPS</p>
+                    <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Online_store_oder_status.mp3" data-index="8">
+                    <p class="service-name">Интернет магазин</p>
+                    <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Payment_reminder.mp3" data-index="9">
+                    <p class="service-name">Финансы</p>
+                    <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Leadgen_real_estate.mp3" data-index="10">
+                    <p class="service-name">Недвижимость</p>
+                        <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+
+                  <!-- Пример элемента сервиса (повторяется для каждого HR-агенства) -->
+                  <div class="service-item voice-assistant" data-audio="./assets/Medicine_confirmation_appointment.mp3" data-index="11">  
+                    <p class="service-name">Медицинские услуги</p>
+                    <div class="playback-controls">
+                          <!-- Элементы управления плеером (иконка воспроизведения, прогресс-бар) -->
+                        <div class="player-back">
+                          <button class="play-pause-btn">
+                            <svg class="icon-play" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M8 5V19L19 12L8 5Z" fill="#2C2C2C"/>
+                            </svg>
+                            <svg class="icon-pause is-hidden" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org">
+                              <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="#2C2C2C"/>
+                            </svg>
+                          </button>
+                          <span class="current-time">0:00</span>
+                            <div class="eq-container">
+                            </div>
+                        </div>
+                  </div>
+
+                  
+                </div>
+              </div>
+
+              <!-- Элементы навигации (стрелки, индикатор страниц) -->
+              <div class="navigation-controls">
+                  <!-- Иконки стрелок, точки-индикаторы -->
+                <button class="nav-arrow left" id="arrow-left">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.5 12.5459C22.3284 12.5459 23 11.8743 23 11.0459C23 10.2175 22.3284 9.5459 21.5 9.5459L21.5 11.0459L21.5 12.5459ZM0.439341 9.98524C-0.146446 10.571 -0.146446 11.5208 0.43934 12.1066L9.98528 21.6525C10.5711 22.2383 11.5208 22.2383 12.1066 21.6525C12.6924 21.0667 12.6924 20.117 12.1066 19.5312L3.62132 11.0459L12.1066 2.56062C12.6924 1.97483 12.6924 1.02508 12.1066 0.439296C11.5208 -0.146491 10.5711 -0.146491 9.98528 0.439296L0.439341 9.98524ZM21.5 11.0459L21.5 9.5459L1.5 9.5459L1.5 11.0459L1.5 12.5459L21.5 12.5459L21.5 11.0459Z" fill="#9640C1"/>
+                  </svg>
+                </button>
+                <div class="nav-dots">
+                    <span class="dot active" data-index="0">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.25302 1.50193C6.43729 1.55607 6.63326 1.55599 6.8175 1.50171L11.7719 0.0420606C12.5301 -0.181315 13.2355 0.521736 13.0147 1.28067L11.5672 6.25558C11.514 6.4383 11.5141 6.63239 11.5674 6.81506L13.0145 11.7745C13.2356 12.5324 12.5324 13.2357 11.7744 13.0145L6.815 11.5675C6.63233 11.5142 6.43823 11.5141 6.25552 11.5672L1.28061 13.0148C0.521674 13.2356 -0.181376 12.5301 0.0419994 11.772L1.50165 6.81756C1.55593 6.63333 1.55601 6.43736 1.50187 6.25308L0.0417818 1.28317C-0.181246 0.524016 0.523955 -0.181185 1.28311 0.0418428L6.25302 1.50193Z" fill="#9640C1"/>
+                      </svg>
+                    </span>
+                    <span class="dot" data-index="1">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.25302 1.50193C6.43729 1.55607 6.63326 1.55599 6.8175 1.50171L11.7719 0.0420606C12.5301 -0.181315 13.2355 0.521736 13.0147 1.28067L11.5672 6.25558C11.514 6.4383 11.5141 6.63239 11.5674 6.81506L13.0145 11.7745C13.2356 12.5324 12.5324 13.2357 11.7744 13.0145L6.815 11.5675C6.63233 11.5142 6.43823 11.5141 6.25552 11.5672L1.28061 13.0148C0.521674 13.2356 -0.181376 12.5301 0.0419994 11.772L1.50165 6.81756C1.55593 6.63333 1.55601 6.43736 1.50187 6.25308L0.0417818 1.28317C-0.181246 0.524016 0.523955 -0.181185 1.28311 0.0418428L6.25302 1.50193Z" fill="#9640C1"/>
+                      </svg>
+                    </span>
+                    <span class="dot" data-index="2">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.25302 1.50193C6.43729 1.55607 6.63326 1.55599 6.8175 1.50171L11.7719 0.0420606C12.5301 -0.181315 13.2355 0.521736 13.0147 1.28067L11.5672 6.25558C11.514 6.4383 11.5141 6.63239 11.5674 6.81506L13.0145 11.7745C13.2356 12.5324 12.5324 13.2357 11.7744 13.0145L6.815 11.5675C6.63233 11.5142 6.43823 11.5141 6.25552 11.5672L1.28061 13.0148C0.521674 13.2356 -0.181376 12.5301 0.0419994 11.772L1.50165 6.81756C1.55593 6.63333 1.55601 6.43736 1.50187 6.25308L0.0417818 1.28317C-0.181246 0.524016 0.523955 -0.181185 1.28311 0.0418428L6.25302 1.50193Z" fill="#9640C1"/>
+                      </svg>
+                    </span>
+                    <span class="dot" data-index="3">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.25302 1.50193C6.43729 1.55607 6.63326 1.55599 6.8175 1.50171L11.7719 0.0420606C12.5301 -0.181315 13.2355 0.521736 13.0147 1.28067L11.5672 6.25558C11.514 6.4383 11.5141 6.63239 11.5674 6.81506L13.0145 11.7745C13.2356 12.5324 12.5324 13.2357 11.7744 13.0145L6.815 11.5675C6.63233 11.5142 6.43823 11.5141 6.25552 11.5672L1.28061 13.0148C0.521674 13.2356 -0.181376 12.5301 0.0419994 11.772L1.50165 6.81756C1.55593 6.63333 1.55601 6.43736 1.50187 6.25308L0.0417818 1.28317C-0.181246 0.524016 0.523955 -0.181185 1.28311 0.0418428L6.25302 1.50193Z" fill="#9640C1"/>
+                      </svg>
+                    </span>                    
+                    <span class="dot" data-index="4">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.25302 1.50193C6.43729 1.55607 6.63326 1.55599 6.8175 1.50171L11.7719 0.0420606C12.5301 -0.181315 13.2355 0.521736 13.0147 1.28067L11.5672 6.25558C11.514 6.4383 11.5141 6.63239 11.5674 6.81506L13.0145 11.7745C13.2356 12.5324 12.5324 13.2357 11.7744 13.0145L6.815 11.5675C6.63233 11.5142 6.43823 11.5141 6.25552 11.5672L1.28061 13.0148C0.521674 13.2356 -0.181376 12.5301 0.0419994 11.772L1.50165 6.81756C1.55593 6.63333 1.55601 6.43736 1.50187 6.25308L0.0417818 1.28317C-0.181246 0.524016 0.523955 -0.181185 1.28311 0.0418428L6.25302 1.50193Z" fill="#9640C1"/>
+                      </svg>
+                    </span>
+                </div>
+                <button class="nav-arrow right" id="arrow-right">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 9.5459C0.671573 9.5459 1.44847e-07 10.2175 0 11.0459C-1.44847e-07 11.8743 0.671573 12.5459 1.5 12.5459L1.5 11.0459L1.5 9.5459ZM22.5607 12.1066C23.1464 11.5208 23.1464 10.571 22.5607 9.98524L13.0147 0.439299C12.4289 -0.146488 11.4792 -0.146488 10.8934 0.439298C10.3076 1.02509 10.3076 1.97483 10.8934 2.56062L19.3787 11.0459L10.8934 19.5312C10.3076 20.117 10.3076 21.0667 10.8934 21.6525C11.4792 22.2383 12.4289 22.2383 13.0147 21.6525L22.5607 12.1066ZM1.5 11.0459L1.5 12.5459L21.5 12.5459L21.5 11.0459L21.5 9.5459L1.5 9.5459L1.5 11.0459Z" fill="#9640C1"/>
+                  </svg>
+                </button>
+              </div>
+          </div>
+        </div>
+    </section>
+    <!-- Секция 8: Отзывы -->
+    <section class="section_reviews" id="reviews">
+      <div class="container">
+    
+    <!-- Модальное окно (изначально скрыто) -->
+      <div id="review-modal" class="modal">
+          <!-- Содержимое формы, как на вашем макете -->
+          <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <h2>ваш отзыв</h2>
+              <form>
+                  <label for="name">Имя</label>
+                  <input type="text" id="name" name="name" value="Иван">
+
+                  <label for="company">Компания</label>
+                  <input type="text" id="company" name="company" value="Барбершоп &quot;Ромашка&quot;">
+                  
+                  <label for="phone">Телефон</label>
+                  <input type="text" id="phone" name="phone" value="+7-999-999-99-99">
+
+                  <label for="review-text-input">Ваш отзыв</label>
+                  <textarea id="review-text-input" name="review-text" placeholder="Текст">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.</textarea>
+
+                  <button class="button primary-btn" type="submit">Отправить</button>
+              </form>
+          </div>
+      </div>
+
+      <!-- Окно подтверждения (изначально скрыто) -->
+      <div id="success-modal" class="modal">
+          <div class="modal-content success-content">
+              <span class="close-button" id="success-close-btn">&times;</span>
+              
+              <!-- Содержимое из вашего изображения -->
+              <h2 class="success-content-title" style="color: #fff;">ваш отзыв отправлен на проверку</h2>
+              <!-- <p style="text-align: center; font-size: 1.2em; margin-bottom: 20px;">
+                  **отправлен на проверку**
+              </p> -->
+              <p>Связаться по вопросам публикации можно по контактам ниже:</p>
+              <p>+7 (921) 176-98-83</p>
+              <p>service@voxflowai.ru</p>
+          </div>
+      </div>
+
+    </section>
+
+    <!-- Секция 8.1: Отзывы с шаблонизатором-->
+    <section class="section_reviews" id="reviews">
+      <div class="container">
+        <div class="reviews_header hide-section">
+          <h1 class="section-title">Отзывы</h1>
+          <a href="#add-review" class="button add-review-btn add-top">Добавить свой отзыв</a>
+        </div>
+
+        <div class="reviews_cards hide-section" id="reviews-container">
+          <!-- Сюда JavaScript будет подставлять карточки из БД -->
+        </div>
+
+        <a href="#add-review" class="button add-review-btn add-bottom hide-section">Добавить свой отзыв</a>
+      </div>
+
+      <template id="review-template">
+        <article class="review-card">
+          <div class="review-card-wrapper">
+            <p class="review-text"></p>
+          </div>
+          <div class="review-meta">
+              <span class="reviewer-name"></span>
+              <span class="reviewer-location"></span>
+          </div>
+        </article>
+      </template>
+    </section>
+
+    <!-- Секция 9: Контакты(форма обратной связи) -->
+    <section class="section_contact" id="cont">
+      <div class="container">
+        <div class="contact_content hide-section">
+          <div class="cont_content_left">
+            <h1 class="section-title form-title">получить консультацию</h1>
+            <form class="contact_form" role="form" aria-label="форма обратной связи">
+              <label for="email">Email</label>
+              <input type="email" name="email" placeholder="Email" required>
+              <label for="company">Компания</label>
+              <input type="text" name="company" placeholder="Компания" required>
+              <label for="phone">Телефон</label>
+              <input type="tel" name="phone" placeholder="Телефон" required>
+              <label for="description">Краткое описание задачи</label>
+              <textarea name="description" placeholder="Краткое описание задачи" required></textarea>
+              <div class="form-buttons">
+                <button type="submit" class="button primary-btn">Отправить</button>
+                <button type="button" class="button secondary-btn" onclick="window.open('https://t.me/maksimfalev','_blank')">Связаться в TG</button>
+                <button type="button" class="button test-btn" onclick="fillTestData(this)">Тест</button>
+              </div>
+            </form>
+          </div>
+          <div class="cont_content_right">
+            <!-- <img class="contact-img" alt="contact-img"> -->
+             <picture>
+              <source media="(min-width: 1919px)" srcset="img/contact_1920.png">
+              <source media="(min-width: 1439px)" srcset="img/contact_1440.png">
+              <source media="(min-width: 767px)" srcset="img/contact_768.png">
+            <img src="img/contact_390.png" class="contact-img" fetchpriority="high">
+             </picture>
+            <div class="contact_content_right_title_email_tel">
+              <h4 class="cont_content_rigth_title">Или свяжитесь с нами напрямую:</h4>
+              <a href="mailto:sales@voxFlow.example">info@voxflowai.ru</a><br/>
+              <a href="tel:+79211769883">+7 (921) 176-98-83</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Окно подтверждения отправки данных формы -->
+    <div id="success-form" class="form-modal">
+        <div class="modal-content success-content">
+            <span class="close-button" id="success-close-btn">&times;</span>
+            
+            <!-- Содержимое из вашего изображения -->
+            <h2 class="success-content-title" style="color: #fff;">ваши данные отправлены</h2>
+            <!-- <p style="text-align: center; font-size: 1.2em; margin-bottom: 20px;">
+                **отправлен на проверку**
+            </p> -->
+            <p>Мы свяжемся с вами в ближайшее время</p>
+        </div>
+    </div>
+
+    <section class="footer" id="footer">
+        <div class="container">
+          <div class="logo-contact-info-social">
+            <div class="logo">VoxFlowAI</div>
+            <aside class="aside-email-tel">
+              <a href="mailto:sales@voxFlow.example">info@voxflowai.ru</a><br/>
+              <a href="tel:+79211769883">+7 (921) 176-98-83</a>
+            </aside>
+            <div class="footer-social">
+              <a href="t.me" target="_blank" aria-label="Telegram">
+                <svg width="26" height="26" viewBox="0 0 240 240" fill="none" xmlns="www.w3.org">
+            <circle cx="120" cy="120" r="120" fill="#2AABEE"/>
+            <path d="M180.6 67.2L157.7 176.4c-1.7 7.6-6.2 9.5-12.5 5.9l-34.6-25.5-16.7 16.1c-1.9 1.9-3.4 3.4-6.9 3.4l2.5-35 63.7-57.5c2.8-2.5-0.6-3.9-4.3-1.4l-78.7 49.5-33.9-10.6c-7.4-2.3-7.6-7.4 1.6-11L170 61.1c6.1-2.3 11.4 1.4 10.6 6.1z" fill="#fff"/>
+            </svg>
+                </a>
+                <a href="t.me" target="_blank" aria-label="Telegram">
+                  <svg width="26" height="26" viewBox="0 0 240 240" fill="none" xmlns="www.w3.org">
+              <circle cx="120" cy="120" r="120" fill="#2AABEE"/>
+              <path d="M180.6 67.2L157.7 176.4c-1.7 7.6-6.2 9.5-12.5 5.9l-34.6-25.5-16.7 16.1c-1.9 1.9-3.4 3.4-6.9 3.4l2.5-35 63.7-57.5c2.8-2.5-0.6-3.9-4.3-1.4l-78.7 49.5-33.9-10.6c-7.4-2.3-7.6-7.4 1.6-11L170 61.1c6.1-2.3 11.4 1.4 10.6 6.1z" fill="#fff"/>
+            </svg>
+                </a>
+                <a href="wa.me" target="_blank" aria-label="WhatsApp">
+            <svg width="26" height="26" viewBox="0 0 256 256" xmlns="www.w3.org">
+              <defs>
+                <clipPath id="clip">
+                  <circle cx="128" cy="128" r="128"/>
+                </clipPath>
+              </defs>
+              <circle cx="128" cy="128" r="128" fill="#25D366"/>
+              <g clip-path="url(#clip)">
+                <path fill="#fff" d="M187.3 68.7C172.6 54 152 46 128.8 46c-46 0-83.2 37.2-83.2 83.1 0 14.6 3.8 28.9 11 41.5L46 210l41-10.7c12 6.6 25.6 10.1 39.8 10.1 46 0 83.2-37.2 83.2-83.1 0-23.2-8-43.8-22.7-58.6Zm-58.5 121c-12.4 0-24.6-3.4-35.1-9.8l-2.5-1.5-24.3 6.4 6.5-23.7-1.6-2.5c-6.7-10.5-10.2-22.5-10.2-34.9 0-36.3 29.6-65.9 65.9-65.9 17.6 0 34.1 6.8 46.5 19.2 12.4 12.5 19.2 29 19.1 46.5 0 36.3-29.6 65.9-65.9 65.9Zm39.1-48.9c-2.1-1-12.6-6.2-14.6-6.9-2-.8-3.5-1.2-5 1.2-1.5 2.3-5.8 6.9-7.1 8.3-1.3 1.5-2.6 1.7-4.7.8-12.8-5.4-21.2-9.6-29.7-21.7-2.2-3.1 2.2-2.9 6.2-11.4.7-1.5.4-2.7-.2-3.9-.6-1.2-5-12.1-6.9-16.6-1.8-4.3-3.7-3.7-5-3.8-1.3-.1-2.8-.1-4.3-.1-1.5 0-4 1-6 3-2 2-7.9 7.7-7.9 18.7s8.1 21.7 9.2 23.2c1.1 1.5 16 24.5 38.8 33.2 22.8 8.7 22.8 5.8 26.9 5.5 4.1-.3 13.2-5.3 15.1-10.4 1.9-5.1 1.9-9.5 1.3-10.4-.5-.9-1.8-1.5-3.9-2.5Z"/>
+              </g>
+            </svg>
+                </a>
+            </div>
+          </div>
+          <nav>
+            <a href="#features">Почему мы</a>
+            <!-- <a href="#pricing">Тарифы</a> -->
+            <a href="#workflow">Этапы работы</a>
+            <a href="#about_us">О нас</a>
+            <a href="#cases">Примеры работ</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contact">Контакты</a>
+          </nav>
+          <p class="copyright">Copyright © 2025 VoxFlowAI Все права защищены.</p>
+        </div>
+    </section>
+    <script src="./js/burger_menu.js"></script>
+    <script src="./js/voice_scroll.js"></script>
+    <script src="./js/voice_equalizer.js"></script>
+    <script src="./js/add_reviews.js"></script>
+    <script src="./js/sent_reviews.js"></script>
+    <script src="./js/form_sent.js"></script>
+    <script>
+      function fillTestData(button) {
+    // Находим ближайшую родительскую форму для нажатой кнопки
+    const form = button.closest('form'); 
+    
+    const testData = {
+        email: "test@example.com",
+        company: "Тестовая компания ООО", 
+        phone: "+79991234567",
+        description: "Тестовое описание задачи для демонстрации работы формы"
+    };
+    
+    // Ищем поля ТОЛЬКО внутри этой конкретной формы
+    form.querySelector('[name="email"]').value = testData.email;
+    form.querySelector('[name="company"]').value = testData.company;
+    form.querySelector('[name="phone"]').value = testData.phone;
+    form.querySelector('[name="description"]').value = testData.description;
+    }
+    </script>
+</body>

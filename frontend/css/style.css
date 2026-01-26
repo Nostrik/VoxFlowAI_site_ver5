@@ -1,0 +1,707 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* * {
+    outline: 1px solid red !important;
+} */
+
+:root {
+    --primary-color: #007bff;
+    --text-color: #333;
+    --background-dark: #;
+    --background-gray: #f8f9fa;
+    --background-dark: #343a40;
+}
+
+body {
+    background-color: #070710;
+    margin: 0;
+}
+
+/* --- Общие стили для всех секций --- */
+section {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 20px; 
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 23px;
+    /* font-size: clamp(1.4375rem, 1.2402rem + 2.0915vw, 3.75rem); */
+    line-height: 1;
+    color: #BFBFBF;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    /* font-size: clamp(0.875rem, 0.8113rem + 0.2614vw, 1.125rem); */
+    font-size: 14px;
+    line-height: 1.3;
+    color: #BFBFBF;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: clamp(0.875rem, 0.8113rem + 0.2614vw, 1.125rem);
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  /* Убираем стандартный фон */
+  background: none;
+  background-color: transparent;
+
+  /* Убираем стандартную рамку (бордюр) */
+  border: none;
+  
+  /* Убираем внутренние и внешние отступы */
+  padding: 0;
+  margin: 0;
+
+  /* Гарантируем наследование шрифта от родительского элемента */
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  
+  /* Делаем курсор "указующим пальцем" при наведении */
+  cursor: pointer;
+  
+  /* Убираем специфические стили, навязанные операционной системой (macOS/Windows) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Убираем стандартное подчеркивание при фокусе в некоторых браузерах */
+  text-decoration: none;
+}
+
+.container {
+    width: clamp(370px, 94vw, 1760px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.burger-nav {
+    display: none;
+}
+
+.button {
+    padding: 6px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000398;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.125rem, 1.0931rem + 0.1307vw, 1.25rem);
+    /* font-size: 10px; */
+    color: #ffffff;
+    transition: background-color 0.6s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #EA00FF;
+    transform: translateY(-3px);
+}
+
+.button:active {
+    background-color: #007bff;
+}
+
+/* --- header --- */
+
+.header .container {
+    /* Теперь Flexbox управляет контентом внутри контейнера, а не самой секцией */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* Убираем padding из #header, так как теперь его обрабатывает .container padding: 0 15px */
+    padding: 0;
+    
+}
+
+.nav_burger_tel_social {
+    display: flex;
+    align-items: center;
+    gap: clamp(85px, 9vw, 193px);
+}
+
+/* Сама секция #header остается только для фона и границ */
+.header {
+    /* Убираем старые паддинги, которые конфликтовали бы с контейнером */
+    display: flex;
+    align-items: center;
+    height: 62px;
+    margin-bottom: 48px;
+    background-color: #190621; 
+    border-bottom: 1px solid #81007F;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9375rem, 0.8693rem + 0.3409vw, 1.125rem);
+    color: #BFBFBF;
+    
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+/* Общее правило: убираем подчеркивание у всех ссылок внутри хедера */
+.header a {
+    text-decoration: none;
+    color: #BFBFBF;
+    transition: color 0.3s ease;
+}
+
+.header a:hover {
+    color: #EA00FF; /* Цвет при наведении */
+}
+
+/* Стили для навигационного меню */
+
+.logo {
+    margin-right: 55px;
+}
+
+nav {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 1;
+    color: #BFBFBF;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav a {
+    margin-right: 23px;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+/* Стили для телефона */
+.header > a[href^="tel:"] {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.header_nav {
+    display: none;
+}
+
+.header-tel {
+    display: none;
+}
+
+.header-social {
+    display: none;
+}
+.nav_burger_tel_social {
+    position: fixed;
+    transform: translateY(-100vh);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav_burger_tel_social.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    top: 63px;
+    left: -2px;
+    gap: 20px;
+    background-color: #190621;
+    border-bottom: 1px solid #81007F;
+    transform: translateY(0);
+}
+
+.header_nav.open {
+    display: flex;
+    padding-right: 183px;
+}
+
+.header-tel.open {
+    display: flex;
+    padding-right: 183px;
+}
+
+.header-social.open {
+    display: flex;
+    padding-right: 234px;
+    gap: 10px;
+}
+
+.burger-icon {
+    display: block; 
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.bar {
+    display: block;
+    width: 50px;
+    height: 6px;
+    background-color: #BFBFBF;
+    transition: 0.4s;
+}
+
+.bar:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* --- АНИМАЦИЯ ПРИ КЛИКЕ --- */
+
+/* 1. Верхняя линия: едет вниз на 16px (высота линии 6 + отступ 10) и крутится */
+.burger-icon.active .bar:nth-child(1) {
+    transform: translateY(16px) rotate(45deg);
+}
+
+/* 2. Средняя линия: исчезает */
+.burger-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+/* 3. Нижняя линия: едет вверх на 16px и крутится в обратную сторону */
+.burger-icon.active .bar:nth-child(3) {
+    transform: translateY(-16px) rotate(-45deg);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/*hero*/
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+.hero_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.hero_content > picture:nth-child(2) {
+    flex: 1;
+}
+
+.hero-btn {
+    min-width: 286px;
+}
+
+/*features*/
+.features_content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+.features_content > picture,
+.features_content_right {
+    flex: 1;
+}
+
+.features-subtitle {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #81007F;
+}
+.features_list li{
+    position: relative;
+    padding-left: 30px;    
+}
+.features_list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/point.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.features_list li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* contact */
+
+.contact_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cont_content_left {
+    flex: 1;
+}
+
+.cont_content_right {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color: #BFBFBF;
+}
+
+form input::placeholder
+form textarea::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color: #CACACA;
+    opacity: 0.5;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    background-color: #190621;
+    border: 1px solid #9640C1;
+    color: #e6e1ff;
+    border-radius: 12px;
+    padding: 9px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    font-family: "Orbitron", sans-serif;
+    }
+input::placeholder,
+textarea::placeholder {
+    color: #7a75a0;
+}
+textarea {
+    resize: vertical;
+    min-height: 115px;
+    margin-bottom: 20px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: block;
+    width: 100%;
+    height: 38px;
+    flex-grow: 1;
+}
+
+.cont_content_rigth_title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+
+.cont_content_right a {
+    text-decoration: none;
+    color: #BFBFBF;
+    transition: color 0.3s ease;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+
+.cont_content_right picture {
+    margin-bottom: 20px;
+}
+
+.cont_content_right a:hover {
+    color: var(--primary-color);
+}
+.contact_content_right_title_email_tel {
+    margin-bottom: 20px;
+}
+.contact_content_right_title_email_tel a:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* workflow */
+
+.workflow_content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.workflow-step:not(:last-child) {
+    margin-bottom: 70px;
+}
+
+.workflow-step {
+    flex: 1;
+}
+
+.step-number {
+    margin-bottom: 20px;
+    font-family: 'Space-Grotesk', sans-serif;
+    font-weight: 100;
+    font-size: 80px;
+    line-height: 0.8;
+    color: #9640C1;
+}
+.workflow-step p {
+    /* font-size: 14px; */
+    margin-bottom: 20px;
+    flex: 1;
+}
+.workflow-step-wrapper {
+    height: 135px;
+    position: relative;
+    margin-bottom: 11px;
+    border-bottom: 1px solid #81007F;
+}
+.workflow-step-wrapper h2{
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrow {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.arrow-second {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.arrow-second svg {
+    display: none;
+}
+.arrow svg {
+    display: none;
+}
+
+
+.arrow::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-right: 4px solid #a855f7;
+    border-bottom: 4px solid #a855f7;
+    transform: translate(35px, -60px) rotate(45deg);
+}
+/* .arrow-second::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-right: 4px solid #a855f7;
+    border-bottom: 4px solid #a855f7;
+    transform: translate(35px, 40px) rotate(315deg);
+} */
+/* about-us */
+
+.about_us_content {
+    display: flex;
+    flex-direction: column;
+}
+.about_us_content picture {
+    flex: 1;
+}
+.about_us_right {
+    padding: 10px;
+    flex: 1;
+}
+.card-description {
+    margin-bottom: 14px;
+    border-bottom: 1px solid #81007F;
+}
+.card-description p{
+    margin-bottom: 14px;
+}
+.partner-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.partner-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 14px; /* 14 16 18 18 */ 
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+.partner-logo img {
+    width: 101px;
+    height: 37px;
+}
+
+/* examples */
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+
+/*footer*/
+
+.footer .logo-contact-info-social {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#footer .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    
+}
+
+#footer {
+    background-color: #030309; 
+    border-top: 1px solid #81007F;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
+}
+
+.footer a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
+    text-decoration: none; /* <-- ЭТО УБИРАЕТ ПОДЧЕРКИВАНИЕ */
+    transition: color 0.3s ease;
+    margin-right: 0;
+}
+
+#footer a:hover {
+    color: #EA00FF; /* Цвет при наведении */
+}
+
+.footer nav {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #BFBFBF;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+    
+}
+
+#footer > a[href^="tel:"] {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#footer p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#footer .logo {
+    padding-top: 10px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: flex;
+}
+
+.logo-contact-info-social {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#footer.close {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+.test-btn {
+    /* display: none; */
+}

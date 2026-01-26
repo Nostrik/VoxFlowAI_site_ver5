@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  nginx-static:
+    image: nginx:alpine # Используем легковесный образ
+    container_name: static_site_container
+    ports:
+      - "80:80" # Сайт будет доступен по стандартному 80 порту
+    volumes:
+      # !! ВАЖНО !!
+      # Монтируем текущую локальную папку (где лежит index.html)
+      # в директорию Nginx для обслуживания файлов
+      - ./frontend:/usr/share/nginx/html:ro
+      # Монтируем файл конфигурации Nginx
+      - ./frontend/nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: always
+
+  backend:
+    build:
+      context: ./backend # Указываем Dockerfile из папки backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app # Привязываем локальный код для live-reload
+    environment:
+      # Подключаем переменные окружения из файла .env в корне проекта
+      - DATABASE_URL=sqlite:///./data/database.db
+    restart: unless-stopped
+    command: ["poetry", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
