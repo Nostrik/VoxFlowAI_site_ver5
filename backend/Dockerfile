@@ -1,26 +1,3 @@
-#FROM python:3.11-slim
-#
-#ENV POETRY_VERSION=1.7.1 \
-#    POETRY_HOME="/opt/poetry" \
-#    POETRY_VIRTUALENVS_CREATE=false \
-#    PATH="/opt/poetry/bin:$PATH"
-#
-#RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
-#
-#RUN curl -sSL https://install.python-poetry.org | python3 -
-#
-#WORKDIR /app
-#
-#COPY pyproject.toml ./
-#
-#RUN poetry install --no-interaction --no-ansi --no-root
-#
-#RUN poetry lock --no-update && \
-#    poetry install --no-interaction --no-ansi --no-root
-#
-#COPY . .
-#
-#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 FROM python:3.11-slim
 
 # Обновляем версию до 2.0.1

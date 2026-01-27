@@ -1,6 +1,6 @@
 import bcrypt
 from sqlalchemy.orm import Mapped, mapped_column
-from sqlalchemy import String, Text, DateTime
+from sqlalchemy import String, Text, Boolean
 from app.database import Base
 from typing import Optional
 from datetime import datetime
@@ -28,6 +28,7 @@ class Review(Base):
     company: Mapped[Optional[str]] = mapped_column(String(100))
     phone: Mapped[Optional[str]] = mapped_column(String(50))
     review_text: Mapped[str] = mapped_column(Text, nullable=False)
+    is_published: Mapped[bool] = mapped_column(Boolean, default=False, server_default="false", nullable=False)
     created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
 
     def __repr__(self) -> str:
