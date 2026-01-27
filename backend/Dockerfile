@@ -1,25 +1,48 @@
+#FROM python:3.11-slim
+#
+#ENV POETRY_VERSION=1.7.1 \
+#    POETRY_HOME="/opt/poetry" \
+#    POETRY_VIRTUALENVS_CREATE=false \
+#    PATH="/opt/poetry/bin:$PATH"
+#
+#RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+#
+#RUN curl -sSL https://install.python-poetry.org | python3 -
+#
+#WORKDIR /app
+#
+#COPY pyproject.toml ./
+#
+#RUN poetry install --no-interaction --no-ansi --no-root
+#
+#RUN poetry lock --no-update && \
+#    poetry install --no-interaction --no-ansi --no-root
+#
+#COPY . .
+#
+#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 FROM python:3.11-slim
 
-ENV POETRY_VERSION=1.7.1 \
-    POETRY_HOME="/opt/poetry" \
+# Обновляем версию до 2.0.1
+ENV POETRY_VERSION=2.0.1 \
+    POETRY_NO_INTERACTION=1 \
     POETRY_VIRTUALENVS_CREATE=false \
-    PATH="/opt/poetry/bin:$PATH"
+    # Добавляем кэш для ускорения сборки
+    POETRY_CACHE_DIR='/tmp/poetry_cache'
 
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
-RUN curl -sSL https://install.python-poetry.org | python3 -
+# Ставим Poetry через pip (это чище для Docker)
+RUN pip install "poetry==$POETRY_VERSION"
 
 WORKDIR /app
 
-COPY pyproject.toml ./
+# Копируем и lock-файл, чтобы версии пакетов были идентичны вашей разработке
+COPY pyproject.toml poetry.lock* ./
 
-RUN poetry install --no-interaction --no-ansi --no-root
-
-RUN poetry lock --no-update && \
-    poetry install --no-interaction --no-ansi --no-root
+# Устанавливаем зависимости (без кэша в итоговом слое)
+RUN poetry install --no-root && rm -rf $POETRY_CACHE_DIR
 
 COPY . .
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-
-

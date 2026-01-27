@@ -3,6 +3,7 @@ name = "backend"
 version = "0.1.0"
 description = "my project"
 authors = ["Your Name <email@example.com>"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.15"
@@ -19,6 +20,7 @@ email-validator = ">=2.3.0,<3.0.0"
 itsdangerous = ">=2.2.0,<3.0.0"
 python-dotenv = ">=1.2.1,<2.0.0"
 bcrypt = ">=4.0.0,<5.0.0"
+alembic = "^1.18.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

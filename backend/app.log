@@ -239,3 +239,60 @@ Stopping reloader process [11048]
 2026-01-26 17:53:31,421 [INFO] app.middleware: Payload: username=admin&password=123
 2026-01-26 17:54:56,804 [INFO] app.middleware: Payload: username=admin&password=123
 2026-01-26 17:56:25,084 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 06:38:16,526 [INFO] app.main: get root is OK
+2026-01-27 06:38:32,929 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 06:39:30,383 [INFO] app.main: api/healthcheck is OK
+2026-01-27 06:40:15,031 [INFO] app.middleware: Payload: {
+  "email": "user@example.com",
+  "company": "string",
+  "phone": "string",
+  "description": "string"
+}
+2026-01-27 06:40:15,186 [INFO] app.crud: New application (Lead ID: 1) successfully added.
+2026-01-27 06:40:47,850 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 06:44:13,740 [INFO] app.middleware: Payload: {
+  "name": "string",
+  "company": "string",
+  "phone": "string",
+  "review_text": "string"
+}
+2026-01-27 06:44:13,788 [INFO] app.crud: New review (Review ID: 1) successfully added.
+2026-01-27 06:44:40,196 [INFO] app.middleware: Payload: ------geckoformboundaryab2fbf318dfa12f55dca33592d52d2c9
+Content-Disposition: form-data; name="name"
+
+string
+------geckoformboundaryab2fbf318dfa12f55dca33592d52d2c9
+Content-Disposition: form-data; name="company"
+
+string
+------geckoformboundaryab2fbf318dfa12f55dca33592d52d2c9
+Content-Disposition: form-data; name="phone"
+
+string
+------geckoformboundaryab2fbf318dfa12f55dca33592d52d2c9
+Content-Disposition: form-data; name="review_text"
+
+string
+------geckoformboundaryab2fbf318dfa12f55dca33592d52d2c9
+Content-Disposition: form-data; name="created_at"
+
+2026-01-27 06:44:13
+------geckoformboundaryab2fbf318dfa12f55dca33592d52d2c9
+Content-Disposition: form-data; name="save"
+
+Save
+------geckoformboundaryab2fbf318dfa12f55dca33592d52d2c9--
+
+2026-01-27 07:31:31,954 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 07:36:02,107 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 07:36:05,068 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 07:36:40,861 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 07:39:36,698 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 07:42:31,828 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 07:53:14,972 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 16:39:14,032 [INFO] app.middleware: Payload: {"email":"test@example.com","company":"Тестовая компания ООО","phone":"+79991234567","description":"Тестовое описание задачи для демонстрации работы формы"}
+2026-01-27 16:40:58,373 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 16:42:36,247 [INFO] app.middleware: Payload: {"email":"test@example.com","company":"Тестовая компания ООО","phone":"+79991234567","description":"Тестовое описание задачи для демонстрации работы формы"}
+2026-01-27 16:42:36,348 [INFO] app.crud: New application (Lead ID: 1) successfully added.
+2026-01-27 16:42:54,301 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-27 16:45:56,380 [INFO] app.middleware: Payload: username=admin&password="*******"
