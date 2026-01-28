@@ -1,5 +1,5 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select
+from sqlalchemy import select, desc
 from app.models import Lead, Review
 from app.schemas import LeadCreate, ReviewCreate
 import logging
@@ -70,5 +70,24 @@ async def get_reviews(db: AsyncSession, skip: int = 0, limit: int = 100) -> List
     reviews = result.scalars().all()
 
     logger.info(f"List of reviews received: {len(reviews)} records (skip={skip}, limit={limit}).")
+
+    return reviews
+
+
+async def get_reviews_is_published_true(db: AsyncSession, skip: int = 0, limit: int = 100) -> List[Review]:
+    """
+    Gets a paginated list of published reviews ordered by newest first.
+    """
+    query = (
+        select(Review)
+        .where(Review.is_published.is_(True))
+        .order_by(desc(Review.created_at))
+        .offset(skip)
+        .limit(limit)
+    )
+    result = await db.execute(query)
+    reviews = result.scalars().all()
+
+    logger.info(f"List of published reviews received: {len(reviews)} (skip={skip}, limit={limit}).")
 
     return reviews

@@ -32,3 +32,19 @@ async def read_reviews(
     """
     reviews = await crud.get_reviews(db, skip=skip, limit=limit)
     return reviews
+
+
+@router.get("/published", response_model=List[Review])
+async def read_published_reviews(
+    skip: int = 0,
+    limit: int = 100,
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Returns only published reviews.
+    """
+    return await crud.get_reviews_is_published_true(
+        db=db,
+        skip=skip,
+        limit=limit
+    )

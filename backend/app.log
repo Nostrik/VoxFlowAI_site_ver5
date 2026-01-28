@@ -326,3 +326,131 @@ Content-Disposition: form-data; name="save"
 Save
 ------geckoformboundarye0b16445e4326a3854e49f4b0d0622ca--
 
+2026-01-28 10:31:09,391 [INFO] app.main: get root is OK
+2026-01-28 10:38:46,008 [INFO] app.main: get root is OK
+2026-01-28 10:38:57,184 [INFO] app.middleware: Payload: {"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:39:03,533 [INFO] app.middleware: Payload: {"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:40:26,423 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 10:41:57,099 [INFO] app.middleware: Payload: {"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:47:43,851 [INFO] app.middleware: Payload: {"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:50:30,666 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:50:30,725 [INFO] app.crud: New review (Review ID: 1) successfully added.
+2026-01-28 10:50:49,876 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 10:51:22,165 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван1","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:51:22,205 [INFO] app.crud: New review (Review ID: 2) successfully added.
+2026-01-28 10:51:26,263 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван2","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:51:26,298 [INFO] app.crud: New review (Review ID: 3) successfully added.
+2026-01-28 10:51:30,265 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван3","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:51:30,302 [INFO] app.crud: New review (Review ID: 4) successfully added.
+2026-01-28 10:53:33,677 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:53:33,716 [INFO] app.crud: New review (Review ID: 5) successfully added.
+2026-01-28 10:53:39,220 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 10:53:54,575 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван4","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:53:54,609 [INFO] app.crud: New review (Review ID: 6) successfully added.
+2026-01-28 10:54:19,804 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван5","location":"Барбершоп \"Ромашка\""}
+2026-01-28 10:54:19,834 [INFO] app.crud: New review (Review ID: 7) successfully added.
+2026-01-28 11:10:03,732 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-28 11:10:15,686 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:10:31,485 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Ибрагим","location":"Барбершоп \"Ромашка\""}
+2026-01-28 11:10:31,541 [INFO] app.crud: New review (Review ID: 8) successfully added.
+2026-01-28 11:10:51,235 [INFO] app.middleware: Payload: ------geckoformboundaryc2e1eb884abcfd7d2aecc22ec6751abd
+Content-Disposition: form-data; name="name"
+
+Ибрагим
+------geckoformboundaryc2e1eb884abcfd7d2aecc22ec6751abd
+Content-Disposition: form-data; name="company"
+
+
+------geckoformboundaryc2e1eb884abcfd7d2aecc22ec6751abd
+Content-Disposition: form-data; name="phone"
+
+
+------geckoformboundaryc2e1eb884abcfd7d2aecc22ec6751abd
+Content-Disposition: form-data; name="review_text"
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.
+------geckoformboundaryc2e1eb884abcfd7d2aecc22ec6751abd
+Content-Disposition: form-data; name="is_published"
+
+y
+------geckoformboundaryc2e1eb884abcfd7d2aecc22ec6751abd
+Content-Disposition: form-data; name="created_at"
+
+2026-01-28 11:10:31
+------geckoformboundaryc2e1eb884abcfd7d2aecc22ec6751abd
+Content-Disposition: form-data; name="save"
+
+Save
+------geckoformboundaryc2e1eb884abcfd7d2aecc22ec6751abd--
+
+2026-01-28 11:11:21,096 [INFO] app.middleware: Payload: ------geckoformboundary8447766b476aec229c2705a46599e87c
+Content-Disposition: form-data; name="name"
+
+Иван1
+------geckoformboundary8447766b476aec229c2705a46599e87c
+Content-Disposition: form-data; name="company"
+
+
+------geckoformboundary8447766b476aec229c2705a46599e87c
+Content-Disposition: form-data; name="phone"
+
+
+------geckoformboundary8447766b476aec229c2705a46599e87c
+Content-Disposition: form-data; name="review_text"
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.
+------geckoformboundary8447766b476aec229c2705a46599e87c
+Content-Disposition: form-data; name="is_published"
+
+y
+------geckoformboundary8447766b476aec229c2705a46599e87c
+Content-Disposition: form-data; name="created_at"
+
+2026-01-28 10:51:22
+------geckoformboundary8447766b476aec229c2705a46599e87c
+Content-Disposition: form-data; name="save"
+
+Save
+------geckoformboundary8447766b476aec229c2705a46599e87c--
+
+2026-01-28 11:11:44,163 [INFO] app.crud: List of published reviews received: 2 (skip=0, limit=100).
+2026-01-28 11:14:51,466 [INFO] app.crud: List of published reviews received: 2 (skip=0, limit=100).
+2026-01-28 11:15:01,648 [INFO] app.crud: List of published reviews received: 2 (skip=0, limit=100).
+2026-01-28 11:15:07,780 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван123","company":"Барбершоп \"Ромашка\"","phone":"+7-999-999-99-99","location":"Барбершоп \"Ромашка\""}
+2026-01-28 11:15:07,817 [INFO] app.crud: New review (Review ID: 9) successfully added.
+2026-01-28 11:15:14,299 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:15:28,282 [INFO] app.middleware: Payload: ------geckoformboundaryc27a94ce0a498956e0324bffe897bf8e
+Content-Disposition: form-data; name="name"
+
+Иван123
+------geckoformboundaryc27a94ce0a498956e0324bffe897bf8e
+Content-Disposition: form-data; name="company"
+
+Барбершоп "Ромашка"
+------geckoformboundaryc27a94ce0a498956e0324bffe897bf8e
+Content-Disposition: form-data; name="phone"
+
++7-999-999-99-99
+------geckoformboundaryc27a94ce0a498956e0324bffe897bf8e
+Content-Disposition: form-data; name="review_text"
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.
+------geckoformboundaryc27a94ce0a498956e0324bffe897bf8e
+Content-Disposition: form-data; name="is_published"
+
+y
+------geckoformboundaryc27a94ce0a498956e0324bffe897bf8e
+Content-Disposition: form-data; name="created_at"
+
+2026-01-28 11:15:7
+------geckoformboundaryc27a94ce0a498956e0324bffe897bf8e
+Content-Disposition: form-data; name="save"
+
+Save
+------geckoformboundaryc27a94ce0a498956e0324bffe897bf8e--
+
+2026-01-28 11:15:33,680 [INFO] app.crud: List of published reviews received: 3 (skip=0, limit=100).
+2026-01-28 11:16:40,145 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван312","company":"Барбершоп \"Ромашка\"","phone":"+7-999-999-99-99","location":"Барбершоп \"Ромашка\""}
+2026-01-28 11:16:40,177 [INFO] app.crud: New review (Review ID: 10) successfully added.
+2026-01-28 11:17:03,128 [INFO] app.middleware: Payload: {"email":"test@example.com","company":"Тестовая компания ООО 1231231","phone":"+79991234567","description":"Тестовое описание задачи для демонстрации работы формы"}
+2026-01-28 11:17:03,207 [INFO] app.crud: New application (Lead ID: 2) successfully added.
