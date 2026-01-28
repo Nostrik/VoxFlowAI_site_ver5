@@ -1,9 +1,10 @@
+import logging
+from typing import List
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, desc
 from app.models import Lead, Review
 from app.schemas import LeadCreate, ReviewCreate
-import logging
-from typing import List
+from app.services.telegram_notifier import send_new_lead_notification, send_new_review_notification
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +24,9 @@ async def create_lead(db: AsyncSession, lead_data: LeadCreate) -> Lead:
     await db.commit()
     await db.refresh(db_lead)
 
-    logger.info(f"New application (Lead ID: {db_lead.id}) successfully added.")
+    logger.info(f"New application (Lead ID: {db_lead.id}) successfully added to DB.")
+
+    await send_new_lead_notification(db_lead)
 
     return db_lead
 
@@ -41,7 +44,7 @@ async def get_leads(db: AsyncSession, skip: int = 0, limit: int = 100) -> List[L
     return leads
 
 
-async def create_review(db: AsyncSession, review_data: ReviewCreate):
+async def create_review(db: AsyncSession, review_data: ReviewCreate) -> Review:
     """
     Creates a new review in the database.
     """
@@ -57,6 +60,8 @@ async def create_review(db: AsyncSession, review_data: ReviewCreate):
     await db.refresh(db_review)
 
     logger.info(f"New review (Review ID: {db_review.id}) successfully added.")
+
+    await send_new_review_notification(db_review)
 
     return db_review
 

@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeModal(modalElement) {
         modalElement.style.display = 'none';
+        // Если обе модалки закрыты, возвращаем скролл
         if (
-            formModal.style.display === 'none' &&
-            successModal.style.display === 'none'
+            (!formModal || formModal.style.display === 'none') &&
+            (!successModal || successModal.style.display === 'none')
         ) {
             document.body.classList.remove('no-scroll');
         }
@@ -28,11 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 3. Карточка отзыва ---
     function createReviewCard(data) {
         const clone = template.content.cloneNode(true);
-
         clone.querySelector('.review-text').textContent = data.review_text;
         clone.querySelector('.reviewer-name').textContent = data.name;
         clone.querySelector('.reviewer-location').textContent = data.location;
-
         return clone;
     }
 
@@ -40,28 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadPublishedReviews() {
         try {
             const response = await fetch('/api/reviews/published');
-
-            if (!response.ok) {
-                throw new Error('Ошибка загрузки отзывов');
-            }
+            if (!response.ok) throw new Error('Ошибка загрузки отзывов');
 
             const reviews = await response.json();
-
             reviewsContainer.innerHTML = '';
-
             reviews.forEach(review => {
                 const card = createReviewCard(review);
                 reviewsContainer.appendChild(card);
             });
-
         } catch (error) {
             console.error('Ошибка загрузки отзывов:', error);
         }
     }
 
-    // --- 5. Обработчики ---
+    // --- 5. Обработчики событий ---
 
-    // Открытие формы
     openButtons.forEach(button => {
         button.addEventListener('click', e => {
             e.preventDefault();
@@ -69,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Закрытие по крестику
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             closeModal(formModal);
@@ -77,16 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Закрытие по клику на оверлей
     window.addEventListener('click', e => {
         if (e.target === formModal) closeModal(formModal);
         if (e.target === successModal) closeModal(successModal);
     });
 
-    // --- 6. Отправка формы ---
-    formElement.addEventListener('submit', async e => {
+    // --- 6. Отправка формы (МГНОВЕННАЯ) ---
+    formElement.addEventListener('submit', e => {
         e.preventDefault();
 
+        // Собираем данные
         const payload = {
             review_text: formElement.querySelector('#review-text-input').value,
             name: formElement.querySelector('#name').value,
@@ -95,29 +86,28 @@ document.addEventListener('DOMContentLoaded', () => {
             location: formElement.querySelector('#company').value
         };
 
-        try {
-            const response = await fetch('/api/reviews/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            });
+        // ШАГ 1: Мгновенно меняем UI
+        closeModal(formModal);    // Закрываем окно ввода
+        openModal(successModal);  // Показываем "Успешно"
+        formElement.reset();      // Чистим форму
 
-            if (!response.ok) {
-                const errorText = await response.text();
-                console.error(errorText);
-                throw new Error('Ошибка при отправке отзыва');
-            }
+        // ШАГ 2: Отправляем запрос "под капотом" (без await)
+        fetch('/api/reviews/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(response => {
+            if (!response.ok) console.error('Ошибка сервера при фоновой отправке');
+        })
+        .catch(error => {
+            console.error('Ошибка сети при фоновой отправке:', error);
+        });
 
-            closeModal(formModal);
-            openModal(successModal);
-            formElement.reset();
-
-        } catch (error) {
-            console.error('Fetch error:', error);
-            alert('Не удалось отправить отзыв. Попробуйте позже.');
-        }
+        // (Опционально) Авто-закрытие окна успеха через 3 секунды
+        setTimeout(() => {
+            closeModal(successModal);
+        }, 3000);
     });
 
     // --- 7. Старт ---

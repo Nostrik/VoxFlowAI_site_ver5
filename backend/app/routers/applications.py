@@ -14,7 +14,8 @@ async def create_lead(
     db: AsyncSession = Depends(get_db)
 ):
     """
-    Receives feedback form data and stores it in the database.
+    Receives feedback form data and stores it in the database
+    (which now sends a Telegram notification internally).
     """
     db_lead = await crud.create_lead(db=db, lead_data=lead_data)
     return db_lead
