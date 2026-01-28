@@ -1,5 +1,6 @@
 import logging
 import sys
+import os
 from pathlib import Path
 from colorlog import ColoredFormatter
 from pydantic_settings import BaseSettings, SettingsConfigDict

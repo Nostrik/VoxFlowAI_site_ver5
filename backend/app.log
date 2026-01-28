@@ -454,3 +454,13 @@ Save
 2026-01-28 11:16:40,177 [INFO] app.crud: New review (Review ID: 10) successfully added.
 2026-01-28 11:17:03,128 [INFO] app.middleware: Payload: {"email":"test@example.com","company":"Тестовая компания ООО 1231231","phone":"+79991234567","description":"Тестовое описание задачи для демонстрации работы формы"}
 2026-01-28 11:17:03,207 [INFO] app.crud: New application (Lead ID: 2) successfully added.
+2026-01-28 11:25:05,262 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:25:22,553 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:36:28,661 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:49:03,888 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:52:05,438 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:52:42,878 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:52:48,226 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:55:22,676 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 11:55:30,214 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-28 12:02:20,797 [INFO] app.middleware: Payload: username=admin&password="*******"

@@ -3,17 +3,19 @@ import logging
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager
-from sqladmin import Admin, ModelView
+from sqladmin import Admin
 from starlette.middleware.sessions import SessionMiddleware
 
 from app.core.config import setup_logging, settings
 from app.database import engine, Base
 from app.routers import reviews
 from app.routers import applications
-from app.models import Lead, Review
 from app.auth import authentication_backend
 from app.middleware import log_requests_middleware
+from app.admin.leads import LeadAdmin
+from app.admin.reviews import ReviewAdmin
 
 load_dotenv()
 APP_SECRET_KEY = os.getenv("SECRET_KEY_APP")
@@ -76,19 +78,18 @@ app.include_router(applications.router, prefix="/api")
 
 
 # 6 Определяем представления для моделей
-class LeadAdmin(ModelView, model=Lead):
-    column_list = [c.name for c in Lead.__table__.columns]
-
-
-class ReviewAdmin(ModelView, model=Review):
-    column_list = [c.name for c in Review.__table__.columns]
-
+# class LeadAdmin(ModelView, model=Lead):
+#     column_list = [c.name for c in Lead.__table__.columns]
+#
+#
+# class ReviewAdmin(ModelView, model=Review):
+#     column_list = [c.name for c in Review.__table__.columns]
 
 # 7 Инициализируем админ-панель
 admin = Admin(
     app=app,
     engine=engine,
-    authentication_backend=authentication_backend
+    authentication_backend=authentication_backend,
 )
 
 # 8 Регистрируем представления
