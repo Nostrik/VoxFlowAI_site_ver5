@@ -1,3 +1,6 @@
+/* Подключаем кибер-шрифт Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -195,6 +198,10 @@ input[type="submit"] {
 
 .logo {
     margin-right: 55px;
+    font-family: "Orbitron", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-shadow:0 0 8px rgba(124,58,237,0.5);
 }
 
 nav {
