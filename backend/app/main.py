@@ -16,6 +16,7 @@ from app.auth import authentication_backend
 from app.middleware import log_requests_middleware
 from app.admin.leads import LeadAdmin
 from app.admin.reviews import ReviewAdmin
+from app.admin.users import UserAdmin
 
 load_dotenv()
 APP_SECRET_KEY = os.getenv("SECRET_KEY_APP")
@@ -95,3 +96,4 @@ admin = Admin(
 # 8 Регистрируем представления
 admin.add_view(LeadAdmin)
 admin.add_view(ReviewAdmin)
+admin.add_view(UserAdmin)

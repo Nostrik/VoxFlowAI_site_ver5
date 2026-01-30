@@ -189,7 +189,6 @@ input[type="submit"] {
 .header a {
     text-decoration: none;
     color: #BFBFBF;
-    /* white-space: nowrap; */
     transition: color 0.3s ease;
 }
 
@@ -383,7 +382,6 @@ nav a:last-child {
 }
 
 /* contact */
-
 .contact_content {
     display: flex;
     flex-direction: column;
@@ -517,7 +515,6 @@ textarea {
     color: #9640C1;
 }
 .workflow-step p {
-    /* font-size: 14px; */
     margin-bottom: 20px;
     flex: 1;
 }
@@ -552,8 +549,6 @@ textarea {
 .arrow svg {
     display: none;
 }
-
-
 .arrow::after {
     content: '';
     position: absolute;
@@ -565,17 +560,6 @@ textarea {
     border-bottom: 4px solid #a855f7;
     transform: translate(35px, -60px) rotate(45deg);
 }
-/* .arrow-second::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 25px;
-    height: 25px;
-    border-right: 4px solid #a855f7;
-    border-bottom: 4px solid #a855f7;
-    transform: translate(35px, 40px) rotate(315deg);
-} */
 /* about-us */
 
 .about_us_content {
@@ -654,13 +638,13 @@ h3 {
     font-size: 18px;
     line-height: 1.5;
     color: #BFBFBF;
-    text-decoration: none; /* <-- ЭТО УБИРАЕТ ПОДЧЕРКИВАНИЕ */
+    text-decoration: none;
     transition: color 0.3s ease;
     margin-right: 0;
 }
 
 #footer a:hover {
-    color: #EA00FF; /* Цвет при наведении */
+    color: #EA00FF;
 }
 
 .footer nav {
@@ -713,5 +697,5 @@ h3 {
     display: none;
 }
 .test-btn {
-    /* display: none; */
+    display: none;
 }
