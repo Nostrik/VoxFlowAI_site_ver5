@@ -13,6 +13,7 @@
 
 /* Базовые стили для всех размытых элементов */
 .background-blob {
+    /* display: none; */
     position: absolute;
     /* Задаем размер и форму (например, круг) */
     width: 400px; 
@@ -157,7 +158,7 @@
         height: var(--blob_7_8_size768);
     }
     .blob-9 {
-        top: 280%;
+        top: 290%;
         left: 32%;
     }
     .blob-10 {
@@ -167,7 +168,7 @@
 }
 @media (min-width: 1440px) {
     .background-blob {
-        filter: blur(280px);
+        filter: blur(380px);
     }
     .blob-1 {
         top: 6%;
@@ -208,20 +209,20 @@
         height: var(--blob_6_size1440);
     }
     .blob-7 {
-        top: 164%;
+        top: 152%;
         left: 10%;
         width: var(--blob_7_8_size768);
         height: var(--blob_7_8_size768);
     }
     .blob-8 {
-        top: 167%;
+        top: 152%;
         left: 57%;
         width: var(--blob_7_8_size768);
         height: var(--blob_7_8_size768);
     }
     .blob-11 {
         visibility: visible;
-        top: 204%;
+        top: 190%;
         left: 42%;
         width: var(--blob_7_8_size768);
         height: var(--blob_7_8_size768);
@@ -240,7 +241,7 @@
 }
 @media (min-width: 1920px) {
     .background-blob {
-        filter: blur(780px);
+        filter: blur(1480px);
     }
     .blob-5 {
         top: 46%;
@@ -268,5 +269,10 @@
     .blob-10 {
         top: 258%;
         left: 6%;
+    }
+}
+@media (min-width: 2000px) {
+    .background-blob {
+        display: none;
     }
 }

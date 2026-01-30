@@ -162,7 +162,9 @@ input[type="submit"] {
 .nav_burger_tel_social {
     display: flex;
     align-items: center;
-    gap: clamp(85px, 9vw, 193px);
+    justify-content: space-between;
+    /* gap: clamp(85px, 9vw, 193px); */
+    /* gap: 10px; */
 }
 
 /* Сама секция #header остается только для фона и границ */
@@ -187,6 +189,7 @@ input[type="submit"] {
 .header a {
     text-decoration: none;
     color: #BFBFBF;
+    /* white-space: nowrap; */
     transition: color 0.3s ease;
 }
 
@@ -429,7 +432,7 @@ textarea {
     width: 100%;
     margin-bottom: 10px;
     font-size: 0.95rem;
-    font-family: "Orbitron", sans-serif;
+    font-family: 'Inter', sans-serif;
     }
 input::placeholder,
 textarea::placeholder {

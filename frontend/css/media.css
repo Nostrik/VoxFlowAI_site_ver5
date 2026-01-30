@@ -6,14 +6,14 @@
         font-size: 16px;
     }
     .section_hero .hero_content {
-    flex-direction: row;
+        flex-direction: row;
     }
     .section_features .features_content {
-    flex-direction: row;
+        flex-direction: row;
     }
     .hero-btn {
-    margin-top: 10px;
-    min-width: 340px;
+        margin-top: 10px;
+        min-width: 340px;
     }
     .nav_burger_tel_social {
         position: static;
@@ -21,6 +21,7 @@
     }
     .header-tel {
         display: flex;
+        margin-right: 30px;
     }
     .header-tel.open{
         display: none;
@@ -154,6 +155,13 @@
     }
     .header a:hover {
         color: #EA00FF;
+    }
+    .nav_burger_tel_social {
+        justify-content: space-between;
+        gap: clamp(25px, 5vw, 173px);
+    }
+    .header a {
+        white-space: nowrap;
     }
     .features_content {
         gap: 20px;
