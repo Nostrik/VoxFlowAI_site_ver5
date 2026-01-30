@@ -5,7 +5,7 @@ from sqlalchemy.orm import DeclarativeBase
 engine = create_async_engine(
     "sqlite+aiosqlite:///./data/database.db",
     connect_args={"check_same_thread": False},
-    echo=True
+    echo=False
 )
 
 # 2. Создаем фабрику сессий

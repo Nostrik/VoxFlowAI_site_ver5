@@ -32,3 +32,8 @@
 2026-01-28 14:32:41,528 [INFO] app.middleware: Payload: {"review_text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos impedit doloribus error quod, quia animi suscipit qui veritatis iste culpa earum vero voluptate. Quis veniam debitis quasi recusandae delectus.","name":"Иван","company":"Барбершоп \"Ромашка\"","phone":"+7-999-999-99-99","location":"Барбершоп \"Ромашка\""}
 2026-01-28 14:32:41,594 [INFO] app.crud: New review (Review ID: 12) successfully added.
 2026-01-28 14:32:41,695 [INFO] app: Notice for review 12 successfully sent to Telegram.
+2026-01-30 15:58:36,115 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-30 15:59:58,356 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-30 16:00:29,838 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-30 16:00:31,870 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-30 16:00:49,380 [INFO] app.middleware: Payload: username=admin&password="*******"
