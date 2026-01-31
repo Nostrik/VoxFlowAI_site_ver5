@@ -200,3 +200,4 @@ Save
 2026-01-31 18:58:11,322 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
 2026-01-31 19:11:25,547 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
 2026-01-31 19:13:30,596 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 19:27:05,071 [INFO] app.main: get root is OK
