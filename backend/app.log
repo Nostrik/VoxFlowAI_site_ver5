@@ -146,3 +146,57 @@ Save
 2026-01-30 16:35:21,687 [INFO] app.middleware: Payload: username=admin&password="*******"
 2026-01-30 16:36:36,432 [INFO] app.middleware: Payload: username=admin&password="*******"
 2026-01-30 16:36:53,093 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-30 23:38:31,675 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 18:27:03,755 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-31 18:27:27,536 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 18:37:09,366 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-31 18:40:57,700 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 18:45:36,925 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-31 18:49:19,100 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-31 18:49:24,016 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 18:52:56,689 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-31 18:53:13,524 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 18:53:21,643 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 18:53:42,476 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-31 18:54:23,941 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 18:55:09,770 [INFO] app.middleware: Payload: {"review_text":"Все было отлично","name":"Максим","company":"Моя любимая компания","phone":"+79999999999","location":"Моя любимая компания"}
+2026-01-31 18:55:09,786 [INFO] app.crud: New review (Review ID: 1) successfully added.
+2026-01-31 18:55:10,102 [INFO] app: Notice for review 1 successfully sent to Telegram.
+2026-01-31 18:56:07,612 [INFO] app.middleware: Payload: {"email":"sairus.89@mail.ru","company":"Моя любимая компания","phone":"+79999999999","description":"Ку ку"}
+2026-01-31 18:56:07,646 [INFO] app.crud: New application (Lead ID: 1) successfully added to DB.
+2026-01-31 18:56:07,848 [INFO] app: Notice for application 1 successfully sent to Telegram.
+2026-01-31 18:56:39,941 [INFO] app.middleware: Payload: ------geckoformboundaryba21e75125abba932d37adbcdcd21847
+Content-Disposition: form-data; name="name"
+
+Максим
+------geckoformboundaryba21e75125abba932d37adbcdcd21847
+Content-Disposition: form-data; name="company"
+
+Моя любимая компания
+------geckoformboundaryba21e75125abba932d37adbcdcd21847
+Content-Disposition: form-data; name="phone"
+
++79999999999
+------geckoformboundaryba21e75125abba932d37adbcdcd21847
+Content-Disposition: form-data; name="review_text"
+
+Все было отлично
+------geckoformboundaryba21e75125abba932d37adbcdcd21847
+Content-Disposition: form-data; name="is_published"
+
+y
+------geckoformboundaryba21e75125abba932d37adbcdcd21847
+Content-Disposition: form-data; name="created_at"
+
+2026-01-31 18:55:9
+------geckoformboundaryba21e75125abba932d37adbcdcd21847
+Content-Disposition: form-data; name="save"
+
+Save
+------geckoformboundaryba21e75125abba932d37adbcdcd21847--
+
+2026-01-31 18:56:45,492 [INFO] app.crud: List of published reviews received: 1 (skip=0, limit=100).
+2026-01-31 18:57:38,480 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 18:58:11,322 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 19:11:25,547 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 19:13:30,596 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
