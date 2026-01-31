@@ -146,3 +146,7 @@ Save
 2026-01-30 16:35:21,687 [INFO] app.middleware: Payload: username=admin&password="*******"
 2026-01-30 16:36:36,432 [INFO] app.middleware: Payload: username=admin&password="*******"
 2026-01-30 16:36:53,093 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-30 22:56:11,572 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-30 22:56:22,340 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-30 22:56:43,835 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-01-30 22:56:49,056 [INFO] app.middleware: Payload: username=admin&password="*******"
