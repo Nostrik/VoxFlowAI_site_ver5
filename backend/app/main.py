@@ -7,7 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager
 from sqladmin import Admin
 from starlette.middleware.sessions import SessionMiddleware
-from starlette.middleware.proxy_headers import ProxyHeadersMiddleware
+from uvicorn.middleware.proxy_headers import ProxyHeadersMiddleware
 
 from app.core.config import setup_logging, settings
 from app.database import engine, Base
@@ -71,7 +71,6 @@ app.add_middleware(
 )
 
 
-
 # 4. Тестовый роут
 @app.get("/")
 async def root():
@@ -90,15 +89,7 @@ app.include_router(reviews.router, prefix="/api")
 app.include_router(applications.router, prefix="/api")
 
 
-# 6 Определяем представления для моделей
-# class LeadAdmin(ModelView, model=Lead):
-#     column_list = [c.name for c in Lead.__table__.columns]
-#
-#
-# class ReviewAdmin(ModelView, model=Review):
-#     column_list = [c.name for c in Review.__table__.columns]
-
-# 7 Инициализируем админ-панель
+# 6 Инициализируем админ-панель
 admin = Admin(
     app=app,
     engine=engine,
@@ -106,7 +97,7 @@ admin = Admin(
     base_url="/admin",
 )
 
-# 8 Регистрируем представления
+# 7 Регистрируем представления
 admin.add_view(LeadAdmin)
 admin.add_view(ReviewAdmin)
 admin.add_view(UserAdmin)
