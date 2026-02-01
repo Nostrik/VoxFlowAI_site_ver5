@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager
 from sqladmin import Admin
 from starlette.middleware.sessions import SessionMiddleware
+from starlette.middleware.proxy_headers import ProxyHeadersMiddleware
 
 from app.core.config import setup_logging, settings
 from app.database import engine, Base
@@ -41,6 +42,11 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+app.add_middleware(
+    ProxyHeadersMiddleware,
+    trusted_hosts="*"
+)
+
 
 @app.middleware("http")
 async def add_logging(request: Request, call_next):
@@ -50,7 +56,12 @@ async def add_logging(request: Request, call_next):
 # 3. Настройка CORS
 # В .env BACKEND_CORS_ORIGINS=["http://localhost:3000", "https://yourdomain.com"]
 origins = [str(origin) for origin in settings.BACKEND_CORS_ORIGINS]
-app.add_middleware(SessionMiddleware, secret_key=APP_SECRET_KEY, https_only=False)
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=APP_SECRET_KEY,
+    https_only=True,
+    same_site="none"
+)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,            # Разрешенные адреса фронтенда
@@ -58,6 +69,7 @@ app.add_middleware(
     allow_methods=["*"],               # Разрешить все методы (GET, POST, etc.)
     allow_headers=["*"],               # Разрешить все заголовки
 )
+
 
 
 # 4. Тестовый роут
@@ -91,6 +103,7 @@ admin = Admin(
     app=app,
     engine=engine,
     authentication_backend=authentication_backend,
+    base_url="/admin",
 )
 
 # 8 Регистрируем представления
