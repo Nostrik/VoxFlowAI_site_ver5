@@ -1,3 +1,7 @@
+networks:
+  webnet:
+    driver: bridge
+
 services:
   nginx-static:
     image: nginx:alpine
@@ -13,12 +17,14 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
+    networks:
+      - webnet
 
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: backend_api
+    container_name: backend
     ports:
       - "8000:8000"
     volumes:
@@ -30,6 +36,8 @@ services:
       --host 0.0.0.0
       --port 8000
     restart: unless-stopped
+    networks:
+      - webnet
 
   bot:
     build:
@@ -43,6 +51,8 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
+    networks:
+      - webnet
 
   # util-контейнер, НЕ сервис
   certbot:
@@ -51,3 +61,6 @@ services:
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
+    networks:
+      - webnet
+
