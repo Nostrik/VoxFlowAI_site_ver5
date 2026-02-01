@@ -1,0 +1,3 @@
+docker compose --profile certbot run --rm certbot renew \
+  --webroot -w /var/www/certbot \
+&& docker compose restart nginx-static

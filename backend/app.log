@@ -201,3 +201,113 @@ Save
 2026-01-31 19:11:25,547 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
 2026-01-31 19:13:30,596 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
 2026-01-31 19:27:05,071 [INFO] app.main: get root is OK
+2026-01-31 19:48:03,934 [INFO] app.main: get root is OK
+2026-01-31 19:48:13,087 [INFO] app.main: get root is OK
+2026-01-31 20:11:46,950 [INFO] app.main: get root is OK
+2026-01-31 21:01:50,229 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 21:02:30,811 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 21:10:41,581 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-31 21:11:50,533 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 21:16:01,105 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 21:16:52,610 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 21:23:36,626 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-01-31 21:29:33,274 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-31 21:31:37,016 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-01-31 23:11:16,134 [INFO] app.main: get root is OK
+2026-02-01 02:14:29,379 [INFO] app.middleware: Payload: ------WebKitFormBoundaryx1049282695061
+Content-Disposition: form-data; name="0"
+
+{"then":"$1:__proto__:then","status":"resolved_model","reason":-1,"value":"{\"then\":\"$B\"}","_response":{"_prefix":"r = 144757+true+7248580;throw Object.assign(new Error('NEXT_REDIRECT'), {digest:`${r}`});return","_formData":{"get":"$1:constructor:constructor"}}}
+------WebKitFormBoundaryx1049282695061
+Content-Disposition: form-data; name="1"
+
+"$@0"
+------WebKitFormBoundaryx1049282695061
+------WebKitFormBoundaryx1049282695061--
+2026-02-01 02:14:36,297 [INFO] app.middleware: Payload: ------WebKitFormBoundaryx673828847577
+Content-Disposition: form-data; name="0"
+
+{"then":"$1:__proto__:then","status":"resolved_model","reason":-1,"value":"{\"then\":\"$B\"}","_response":{"_prefix":"r = 192274+true+3504524;throw Object.assign(new Error('NEXT_REDIRECT'), {digest:`${r}`});return","_formData":{"get":"$1:constructor:constructor"}}}
+------WebKitFormBoundaryx673828847577
+Content-Disposition: form-data; name="1"
+
+"$@0"
+------WebKitFormBoundaryx673828847577
+------WebKitFormBoundaryx673828847577--
+2026-02-01 02:14:43,179 [INFO] app.middleware: Payload: ------WebKitFormBoundaryx253179559615
+Content-Disposition: form-data; name="0"
+
+{"then":"$1:__proto__:then","status":"resolved_model","reason":-1,"value":"{\"then\":\"$B\"}","_response":{"_prefix":"r = 30197+true+8384262;throw Object.assign(new Error('NEXT_REDIRECT'), {digest:`${r}`});return","_formData":{"get":"$1:constructor:constructor"}}}
+------WebKitFormBoundaryx253179559615
+Content-Disposition: form-data; name="1"
+
+"$@0"
+------WebKitFormBoundaryx253179559615
+------WebKitFormBoundaryx253179559615--
+2026-02-01 02:14:50,360 [INFO] app.middleware: Payload: ------WebKitFormBoundaryx446407874137
+Content-Disposition: form-data; name="0"
+
+{"then":"$1:__proto__:then","status":"resolved_model","reason":-1,"value":"{\"then\":\"$B\"}","_response":{"_prefix":"r = 123319+true+3619944;throw Object.assign(new Error('NEXT_REDIRECT'), {digest:`${r}`});return","_formData":{"get":"$1:constructor:constructor"}}}
+------WebKitFormBoundaryx446407874137
+Content-Disposition: form-data; name="1"
+
+"$@0"
+------WebKitFormBoundaryx446407874137
+------WebKitFormBoundaryx446407874137--
+2026-02-01 02:14:57,507 [INFO] app.middleware: Payload: ------WebKitFormBoundaryx514468236034
+Content-Disposition: form-data; name="0"
+
+{"then":"$1:__proto__:then","status":"resolved_model","reason":-1,"value":"{\"then\":\"$B\"}","_response":{"_prefix":"r = 335229+true+1534677;throw Object.assign(new Error('NEXT_REDIRECT'), {digest:`${r}`});return","_formData":{"get":"$1:constructor:constructor"}}}
+------WebKitFormBoundaryx514468236034
+Content-Disposition: form-data; name="1"
+
+"$@0"
+------WebKitFormBoundaryx514468236034
+------WebKitFormBoundaryx514468236034--
+2026-02-01 02:15:04,935 [INFO] app.middleware: Payload: ------WebKitFormBoundaryx787071367063
+Content-Disposition: form-data; name="0"
+
+{"then":"$1:__proto__:then","status":"resolved_model","reason":-1,"value":"{\"then\":\"$B\"}","_response":{"_prefix":"r = 186642+true+4217011;throw Object.assign(new Error('NEXT_REDIRECT'), {digest:`${r}`});return","_formData":{"get":"$1:constructor:constructor"}}}
+------WebKitFormBoundaryx787071367063
+Content-Disposition: form-data; name="1"
+
+"$@0"
+------WebKitFormBoundaryx787071367063
+------WebKitFormBoundaryx787071367063--
+2026-02-01 02:17:23,993 [INFO] app.main: get root is OK
+2026-02-01 04:51:02,603 [INFO] app.main: get root is OK
+2026-02-01 05:23:43,098 [INFO] app.main: get root is OK
+2026-02-01 05:50:53,328 [INFO] app.main: get root is OK
+2026-02-01 06:19:47,371 [INFO] app.main: get root is OK
+2026-02-01 06:46:12,077 [INFO] app.main: get root is OK
+2026-02-01 06:58:39,548 [INFO] app.main: get root is OK
+2026-02-01 07:05:15,198 [INFO] app.main: get root is OK
+2026-02-01 07:13:26,742 [INFO] app.main: get root is OK
+2026-02-01 07:28:11,829 [INFO] app.main: get root is OK
+2026-02-01 07:28:21,868 [INFO] app.main: get root is OK
+2026-02-01 07:40:57,671 [INFO] app.main: get root is OK
+2026-02-01 07:47:52,525 [INFO] app.main: get root is OK
+2026-02-01 07:49:20,183 [INFO] app.main: get root is OK
+2026-02-01 08:08:51,617 [INFO] app.main: get root is OK
+2026-02-01 08:10:20,956 [INFO] app.main: get root is OK
+2026-02-01 08:10:21,558 [INFO] app.middleware: Payload: ------B1769933421042617833
+Content-Disposition: form-data; name="0"
+
+{"then":"$1:__proto__:then","status":"resolved_model","reason":-1,"value":"{\"then\":\"$B0\"}","_response":{"_prefix":"test","_formData":{"get":"$1:constructor:constructor"}}}
+------B1769933421042617833
+Content-Disposition: form-data; name="1"
+
+"$@0"
+------B1769933421042617833--
+
+2026-02-01 08:36:17,960 [INFO] app.main: get root is OK
+2026-02-01 08:56:43,875 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-02-01 09:01:08,655 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-02-01 09:01:29,949 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-02-01 09:02:48,824 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-02-01 09:03:16,234 [INFO] app.middleware: Payload: username=admin&password="*******"
+2026-02-01 09:10:16,569 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-02-01 09:10:35,997 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
+2026-02-01 09:11:30,559 [INFO] app.main: get root is OK
+2026-02-01 09:16:08,113 [INFO] app: Bot startup successful CHAT_ID is 1112758836
+2026-02-01 09:16:15,235 [INFO] app.crud: List of published reviews received: 0 (skip=0, limit=100).
