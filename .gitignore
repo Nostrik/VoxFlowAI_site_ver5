@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 backend/app/__pycache__
 backend/app.log
+data/certbot/
