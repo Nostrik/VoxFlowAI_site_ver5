@@ -11,7 +11,8 @@ services:
       - "443:443"
     volumes:
       - ./frontend:/usr/share/nginx/html:ro
-      - ./frontend/nginx.conf:/etc/nginx/nginx.conf:ro
+      #- ./frontend/nginx80.conf:/etc/nginx/nginx.conf:ro
+      - ./frontend/nginx443.conf:/etc/nginx/nginx.conf:ro
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     restart: unless-stopped

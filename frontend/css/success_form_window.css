@@ -21,7 +21,7 @@
 }
 
 .modal-content {
-    background: rgba(34, 34, 34, 0.9);
+    background: rgba(34, 34, 34, 0.99);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(40px);
     padding: 40px;
